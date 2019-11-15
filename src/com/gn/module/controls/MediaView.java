@@ -25,6 +25,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.shape.Path;
@@ -50,6 +51,7 @@ public class MediaView implements Initializable {
     @FXML private javafx.scene.media.MediaView mediaView;
     @FXML private Label playTime;
     @FXML private FontAwesomeIconView icon;
+    @FXML private ImageView img;
 
     private Duration duration;
 //    private Media media = new Media("file:///C:/Users/gleid/Videos/Android.mp4");
@@ -63,7 +65,7 @@ public class MediaView implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
 
-        media = new Media(new File("src/com/gn/module/media/Cheerleader.mp4").toURI().toString());
+        media = new Media(new File("src/com/gn/module/media/mediamovies/lookismmedia.mp4").toURI().toString());
         mediaPlayer = new MediaPlayer(media);
 
         mediaView.setMediaPlayer(mediaPlayer);

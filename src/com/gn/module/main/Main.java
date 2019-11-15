@@ -16,9 +16,11 @@
  */
 package com.gn.module.main;
 
+import com.gn.Database.Database;
 import com.gn.GNAvatarView;
 import com.gn.global.plugin.ViewManager;
 import com.gn.global.factory.AlertCell;
+import com.gn.objects.Movie;
 import com.jfoenix.controls.JFXBadge;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
@@ -48,13 +50,11 @@ import org.controlsfx.control.PopOver;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-/**
- * @author Gleidson Neves da Silveira | gleidisonmt@gmail.com
- * Create on  08/10/2018
- * Version 2.0
- */
+
 public class Main implements Initializable {
 
     @FXML private GNAvatarView avatar;
@@ -97,6 +97,10 @@ public class Main implements Initializable {
     private ObservableList<Button> controlsItems = FXCollections.observableArrayList();
     private ObservableList<Button> chartsItems   = FXCollections.observableArrayList();
 
+    //ต่อ Database
+    public Connection connection = Database.connect("localhost/se_db","root","");
+    public ArrayList<Movie> movies = Movie.getMoviesData(connection);
+
     private JFXDialog       dialog          = new JFXDialog();
     private JFXDialogLayout dialog_layout   = new JFXDialogLayout();
 
@@ -138,7 +142,7 @@ public class Main implements Initializable {
 
             }
         });
-        body.setContent(ViewManager.getInstance().get("dashboard"));
+        body.setContent(ViewManager.getInstance().get("Home"));
 
         try {
             addSubPop();
@@ -146,6 +150,7 @@ public class Main implements Initializable {
             e.printStackTrace();
         }
 //        drawer.setPopStylesheet(getClass().getResource("/com/gn/theme/css/popover.css"));
+        home();
     }
 
 
@@ -551,7 +556,7 @@ public class Main implements Initializable {
 
     @FXML
     private void stackedBarChart(){
-        title.setText("StackedBarChart");
+        title.setText("เลือกที่นั่ง");
         body.setContent(ViewManager.getInstance().get("stackedbarchart"));
     }
 
@@ -569,9 +574,9 @@ public class Main implements Initializable {
 
 
     @FXML
-    private void dashboard(){
-        title.setText("Dashboard");
-        body.setContent(ViewManager.getInstance().get("dashboard"));
+    private void home(){
+        title.setText("หน้าหลัก");
+        body.setContent(ViewManager.getInstance().get("Home"));
     }
 
     @FXML
@@ -636,7 +641,7 @@ public class Main implements Initializable {
 
     @FXML
     private void jfxTextField(){
-        title.setText("JFXTextField");
+        title.setText("ภาพยนตร์");
         body.setContent(ViewManager.getInstance().get("jfx-text-field"));
     }
 

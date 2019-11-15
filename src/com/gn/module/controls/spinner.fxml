@@ -1,75 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Spinner?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
+        <?import com.jfoenix.controls.JFXButton?>
+        <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+        <?import java.lang.String?>
+        <?import java.net.URL?>
+        <?import javafx.geometry.Insets?>
+        <?import javafx.geometry.Rectangle2D?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.control.Slider?>
+        <?import javafx.scene.image.Image?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.layout.AnchorPane?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.StackPane?>
+        <?import javafx.scene.layout.VBox?>
+        <?import javafx.scene.media.MediaView?>
+        <?import javafx.scene.text.Font?>
+        <?import javafx.scene.text.Text?>
+        <?import javafx.scene.text.TextFlow?>
 
-<StackPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.controls.SpinnerCtrl">
-   <children>
-      <TabPane>
-         <tabs>
-            <Tab closable="false" text="Introduction">
-               <content>
-                  <VBox alignment="CENTER" prefHeight="433.0" prefWidth="772.0" spacing="10.0">
-                     <children>
-                        <VBox alignment="CENTER_LEFT">
-                           <children>
-                              <Label prefHeight="58.0" prefWidth="302.0" text="Spinner">
-                                 <styleClass>
-                                    <String fx:value="h3" />
-                                    <String fx:value="title" />
-                                 </styleClass>
-                              </Label>
-                              <TextFlow prefHeight="54.0" prefWidth="952.0">
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="A single line text field that lets the user select a number or an object value from an ordered sequence. Spinners typically provide a pair of tiny arrow buttons for stepping through the elements of the sequence. The keyboard up/down arrow keys also cycle through the elements. " wrappingWidth="558.283203125" />
-                                 </children>
-                              </TextFlow>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" prefHeight="368.0" prefWidth="940.0" spacing="20.0" VBox.vgrow="ALWAYS">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="707.0" prefWidth="940.0" spacing="10.0">
-                                 <children>
-                                    <Spinner fx:id="spinner" editable="true">
-
-                                    </Spinner>
-                                 </children></HBox>
-                           </children>
-                        </VBox>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
-                     </padding>
-                  </VBox>
-               </content>
-            </Tab>
-         </tabs>
-         <styleClass>
-            <String fx:value="tab-white" />
-            <String fx:value="tab-line-aqua" />
-            <String fx:value="tab-shadow-none" />
-         </styleClass>
-      </TabPane>
-   </children>
-   <stylesheets>
-      <URL value="@../../theme/css/material-color.css" />
-      <URL value="@../../theme/css/skeleton.css" />
-      <URL value="@../../theme/css/light.css" />
-      <URL value="@../../theme/css/bootstrap.css" />
-      <URL value="@../../theme/css/simple-green.css" />
-      <URL value="@../../theme/css/shape.css" />
-      <URL value="@../../theme/css/typographic.css" />
-      <URL value="@../../theme/css/helpers.css" />
-      <URL value="@../../theme/css/master.css" />
-   </stylesheets>
+<StackPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.controls.MediaView">
+<children>
+    <VBox alignment="CENTER" prefHeight="600.0" prefWidth="1165.0" spacing="10.0">
+        <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="976.0">
+                <children>
+                    <Label prefHeight="7.0" prefWidth="349.0" text="Harry Potter: He is Back 2020">
+                        <styleClass>
+                            <String fx:value="h3" />
+                            <String fx:value="title" />
+                        </styleClass>
+                    </Label>
+                </children>
+            </VBox>
+            <VBox alignment="CENTER" prefWidth="952.0" spacing="20.0" styleClass="box-light" VBox.vgrow="ALWAYS">
+                <children>
+                    <HBox alignment="CENTER" prefHeight="345.0" prefWidth="940.0" spacing="10.0">
+                        <children>
+                            <ImageView fitHeight="391.0" fitWidth="279.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../media/movies/10.jpg" />
+                                </image>
+                            </ImageView>
+                            <VBox prefHeight="393.0" prefWidth="800.0">
+                                <children>
+                                    <AnchorPane>
+                                        <children>
+                                            <VBox alignment="CENTER" layoutY="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                <children>
+                                                    <MediaView fx:id="mediaView" fitHeight="330.0" fitWidth="800.0">
+                                                        <viewport>
+                                                            <Rectangle2D />
+                                                        </viewport>
+                                                    </MediaView>
+                                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="462.0">
+                                                        <children>
+                                                            <JFXButton contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#play" prefHeight="30.0" prefWidth="40.0" ripplerFill="#000000c7" text="Play">
+                                                                <graphic>
+                                                                    <FontAwesomeIconView fx:id="icon" fill="#00000080" glyphName="PLAY" style="-fx-fill: -icon-color;" />
+                                                                </graphic>
+                                                                <styleClass>
+                                                                    <String fx:value="btn-transparent" />
+                                                                    <String fx:value="round" />
+                                                                </styleClass>
+                                                            </JFXButton>
+                                                            <Slider fx:id="slider" prefHeight="16.0" prefWidth="266.0" />
+                                                            <Label fx:id="playTime" prefHeight="15.0" prefWidth="95.0" style="-fx-text-fill: -text-color;" text="Label" />
+                                                            <Label prefHeight="17.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" text="Volume" />
+                                                            <Slider fx:id="volumeSlider" prefHeight="18.0" prefWidth="81.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </VBox>
+                                        </children>
+                                    </AnchorPane>
+                                </children>
+                            </VBox>
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT">
+                <children>
+                    <Label prefHeight="38.0" prefWidth="195.0" text="ประเภท: Action">
+                        <styleClass>
+                            <String fx:value="h4" />
+                            <String fx:value="sub-title" />
+                        </styleClass>
+                    </Label>
+                    <Label prefHeight="27.0" prefWidth="218.0" text="เข้าฉาย: 26 พฤศจิกายน 2019">
+                        <styleClass>
+                            <String fx:value="h4" />
+                            <String fx:value="sub-title" />
+                        </styleClass>
+                    </Label>
+                    <Label prefHeight="38.0" prefWidth="195.0" text="เวลา: 248 นาที">
+                        <styleClass>
+                            <String fx:value="h4" />
+                            <String fx:value="sub-title" />
+                        </styleClass>
+                    </Label>
+                    <Label prefHeight="27.0" prefWidth="258.0" text="ผู้กำกับ: Chris Joseph Columbus">
+                        <styleClass>
+                            <String fx:value="h4" />
+                            <String fx:value="sub-title" />
+                        </styleClass>
+                    </Label>
+                    <Label prefHeight="27.0" prefWidth="427.0" text="นักแสดงนำ: Daniel Jacob Radcliffe, Emma Watson">
+                        <styleClass>
+                            <String fx:value="h4" />
+                            <String fx:value="sub-title" />
+                        </styleClass>
+                    </Label>
+                </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT">
+                <children>
+                    <Label prefHeight="38.0" prefWidth="195.0" text="เรื่องย่อ">
+                        <styleClass>
+                            <String fx:value="h3" />
+                            <String fx:value="title" />
+                        </styleClass>
+                    </Label>
+                    <TextFlow prefHeight="54.0" prefWidth="952.0">
+                        <children>
+                            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="เรื่องเริ่มต้นที่บ้านของลูเซียส มัลฟอย โดยลอร์ดโวลเดอมอร์ และสมุนจำนวนหนึ่ง วางแผนการเกี่ยวกับการย้ายออกจากบ้านเดอร์สลี่ย์ของแฮร์รี่ พอตเตอร์ เจ้าหน้าที่ของกระทรวงชื่อแยกซ์ลีย์ ระบุว่าแฮร์รี่จะย้ายออกในวันคล้ายวันเกิด ในขณะที่สเนประบุว่าแฮร์รี่จะย้ายออกก่อนหน้านั้นหนึ่งสัปดาห์ โวลเดอมอร์ยืมไม้กายสิทธิ์ของมัลฟอย จากการที่ไม้กายสิทธิ์ของเขาเองใช้ไม่ได้ผลกับแฮร์รี่ภาคีนกฟีนิกซ์ส่งพ่อมดมาคุ้มครองครอบครัวเดอร์สลีย์ ในขณะที่กองกำลังอีกส่วนหนึ่งมาพาตัวแฮร์รี่ออกไป โดยวางแผนให้คนอีกหกคนเป็นนกต่อ ใช้น้ำยาสรรพรสแปลงตัวเป็นแฮร์รี่กระจายไปยังที่ซ่อนต่างๆกัน แต่แฮร์รี่ยังคงถูกสมุนโวลเดอมอร์ระบุตัวได้จากการใช้คาถาปลดอาวุธที่เขาใช้กับผู้เสพความตายซึ่งถูกคาถาสกดใจ อย่างไรก็ตาม ไม้กายสิทธิ์ของแฮร์รี่ยังคงชนะไม้ที่ยืมมาของโวลเดอมอร์ แฮร์รี่ไปถึงบ้านโพรงกระต่ายอย่างปลอดภัย แต่เฮ็ดวิกต้องตายจากการปะทะกัน และพบว่าจอร์จ วีสลีย์เสียหูไปข้างหนึ่งด้วยคาถาของสเนป และอลาสเตอร์ มูดดี้ถูกโวลเดอมอร์ฆ่า" wrappingWidth="1086.443359375">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                            </Text>
+                        </children>
+                    </TextFlow>
+                </children>
+            </VBox>
+        </children>
+        <padding>
+            <Insets bottom="10.0" left="30.0" right="30.0" top="100.0" />
+        </padding>
+    </VBox>
+</children>
+<stylesheets>
+    <URL value="@../../theme/css/material-color.css" />
+    <URL value="@../../theme/css/skeleton.css" />
+    <URL value="@../../theme/css/light.css" />
+    <URL value="@../../theme/css/bootstrap.css" />
+    <URL value="@../../theme/css/simple-green.css" />
+    <URL value="@../../theme/css/shape.css" />
+    <URL value="@../../theme/css/typographic.css" />
+    <URL value="@../../theme/css/helpers.css" />
+    <URL value="@../../theme/css/master.css" />
+</stylesheets>
 </StackPane>

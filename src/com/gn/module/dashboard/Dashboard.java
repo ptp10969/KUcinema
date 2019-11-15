@@ -1,79 +1,60 @@
-/*
- * Copyright (C) Gleidson Neves da Silveira
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.gn.module.dashboard;
 
-import eu.hansolo.tilesfx.Tile;
-import eu.hansolo.tilesfx.chart.ChartData;
+
+import com.gn.GNAvatarView;
+import com.gn.global.plugin.ViewManager;
+import com.gn.global.factory.AlertCell;
+import com.gn.module.main.Main;
+import com.jfoenix.controls.JFXBadge;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.AreaChart;
-import javafx.scene.chart.PieChart;
-import javafx.scene.chart.XYChart;
-import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
+import javafx.geometry.NodeOrientation;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.SVGPath;
+import org.controlsfx.control.PopOver;
 
+import java.io.IOException;
 import java.net.URL;
-import java.time.ZonedDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
-/**
- * @author Gleidson Neves da Silveira | gleidisonmt@gmail.com
- * Create on  20/10/2018
- * Version 1.0
- */
-public class Dashboard implements Initializable {
+public class Dashboard {
+    @FXML private Button submit1;
+    @FXML private Button submit2;
+    @FXML private Button submit3;
+    @FXML private Button submit4;
+    @FXML private Button submit5;
+    @FXML private Pane container;
+    private Label label1 ;
+    private Label label2 ;
 
-//    @FXML private Tile calendar;
-    @FXML private AreaChart<String, Number> areaChart;
-
-    @FXML private PieChart pieChart;
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
-                new PieChart.Data("Sun", 20),
-                new PieChart.Data("IBM", 12),
-                new PieChart.Data("HP", 25),
-                new PieChart.Data("Dell", 22),
-                new PieChart.Data("Apple", 30)
-        );
-        pieChart.setData(pieChartData);
-        pieChart.setClockwise(false);
-
-        XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.setName("Legend 1");
-        series.getData().add(new XYChart.Data<>("0", 2D));
-        series.getData().add(new XYChart.Data<>("1", 8D));
-        series.getData().add(new XYChart.Data<>("2", 5D));
-        series.getData().add(new XYChart.Data<>("3", 3D));
-        series.getData().add(new XYChart.Data<>("4", 6D));
-        series.getData().add(new XYChart.Data<>("5", 8D));
-        series.getData().add(new XYChart.Data<>("6", 5D));
-        series.getData().add(new XYChart.Data<>("7", 6D));
-        series.getData().add(new XYChart.Data<>("8", 5D));
-
-        areaChart.getData().setAll(series);
-        areaChart.setCreateSymbols(true);
+    public void initialize(){
+        label1 = new Label("test");
+        label2 = new Label("test2");
+        container.getChildren().addAll(label1,label2);
     }
+    @FXML public void detail(int movie_id){
+        Main.ctrl.body.setContent(ViewManager.getInstance().get("mediaview"));
+    }
+
+
+
 }

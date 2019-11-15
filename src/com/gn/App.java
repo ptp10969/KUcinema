@@ -1,19 +1,4 @@
-/*
- * Copyright (C) Gleidson Neves da Silveira
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
+
 
 package com.gn;
 
@@ -43,12 +28,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Init the app class.
- * @author Gleidson Neves da Silveira | gleidisonmt@gmail.com
- * Create on  07/10/2018
- * Version 1.0
- */
+
 public class App extends Application {
 
     private float  increment = 0;
@@ -125,6 +105,9 @@ public class App extends Application {
         load("login", "login");
         load("login", "account");
 
+        load("movie","Home");
+        load("movie","MovieDetail");
+
 //        System.out.println(ViewManager.getInstance().getSize());
 
         // delay
@@ -157,7 +140,7 @@ public class App extends Application {
 
     private void initialScene(){
 
-        decorator.setTitle("DashboardFx");
+        decorator.setTitle("KU CINEMA");
 //        decorator.setIcon(null);
         decorator.addButton(ButtonType.FULL_EFFECT);
         decorator.initTheme(GNDecorator.Theme.DEFAULT);
@@ -217,6 +200,7 @@ public class App extends Application {
         );
 
         decorator.setMaximized(true);
+
         decorator.getStage().getIcons().add(new Image("/com/gn/module/media/logo2.png"));
         decorator.show();
 
