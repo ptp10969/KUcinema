@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.File;
@@ -27,6 +28,8 @@ public class MovieDetailController implements Initializable {
     @FXML private Label playTime;
     @FXML private FontAwesomeIconView icon;
     @FXML private ImageView img;
+    @FXML private Label title;
+    @FXML private Text detail;
 
     private Duration duration;
     //    private Media media = new Media("file:///C:/Users/gleid/Videos/Android.mp4");
@@ -220,7 +223,15 @@ public class MovieDetailController implements Initializable {
         mediaPlayer.pause();
     }
 
-    public void setImage(Image img){
-        this.img.setImage(img);
+    public void setImage(ImageView img){
+        this.img.setImage(img.getImage());
+    }
+
+    public void setDetail(String detail){
+        this.detail.setText(detail);
+    }
+
+    public void setTitle(String title){
+        this.title.setText(title);
     }
 }

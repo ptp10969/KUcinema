@@ -52,6 +52,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 
@@ -99,7 +100,8 @@ public class Main implements Initializable {
 
     //ต่อ Database
     public Connection connection = Database.connect("localhost/se_db","root","");
-    public ArrayList<Movie> movies = Movie.getMoviesData(connection);
+    public HashMap<String,Movie> movies = Movie.getMoviesData(connection);
+    public ArrayList<String> keys = Movie.getMovieKey(connection);
 
     private JFXDialog       dialog          = new JFXDialog();
     private JFXDialogLayout dialog_layout   = new JFXDialogLayout();
