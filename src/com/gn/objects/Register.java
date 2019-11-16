@@ -31,6 +31,29 @@ public class Register {
         }
     }
 
+    public ArrayList<String> login(String userId, String password) throws Exception {
+        ArrayList<String> str = new ArrayList<>();
+        try {
+            Connection connection = Database.connect("localhost/se_db", "root", "");
+            String query = "SELECT * FROM users WHERE user_id = '" +userId+"' AND password = '" +password+"'";
+
+            Statement psmt = connection.createStatement();
+            ResultSet rs = psmt.executeQuery(query);
+
+            str.add(rs.getString("user_id"));
+            str.add(rs.getString("name"));
+
+            connection.close();
+
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+        if(str != null)
+            return str;
+        else return null;
+    }
+
     public String getUserId() {
         return userId;
     }

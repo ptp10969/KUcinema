@@ -26,6 +26,7 @@ import com.gn.global.*;
 import com.gn.global.plugin.SectionManager;
 import com.gn.global.plugin.UserManager;
 import com.gn.module.main.Main;
+import com.gn.objects.Register;
 import javafx.animation.RotateTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -39,6 +40,7 @@ import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -140,7 +142,7 @@ public class login implements Initializable {
     }
 
     @FXML
-    private void loginAction(){
+    private void loginAction() throws Exception {
         Pulse pulse = new Pulse(login);
         pulse.setDelay(Duration.millis(20));
         pulse.play();
@@ -150,6 +152,10 @@ public class login implements Initializable {
             lbl_password.setVisible(true);
             lbl_username.setVisible(true);
         }
+        Register register = new Register();
+        ArrayList<String> str = register.login(username.getText(),password.getText());
+
+        if(str != null) ;
     }
 
     private void enter() {
