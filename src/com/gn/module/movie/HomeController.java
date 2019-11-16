@@ -3,6 +3,7 @@ package com.gn.module.movie;
 import com.gn.global.plugin.ViewManager;
 import com.gn.module.main.Main;
 import com.gn.objects.Movie;
+import com.gn.objects.Seat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -15,6 +16,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import jfxtras.styles.jmetro8.JMetro;
+
+import java.util.ArrayList;
 
 public class HomeController {
     @FXML private Pane container;
@@ -40,7 +43,7 @@ public class HomeController {
     }
     @FXML public void detail(String movie_id){
         Movie temp = Main.ctrl.movies.get(movie_id);
-        MovieDetailController.mdc.setImage(temp.getPicture());
+        MovieDetailController.mdc.setImage(temp.getBig_picture());
         MovieDetailController.mdc.setTitle(temp.getName());
         MovieDetailController.mdc.setDetail(temp.getDetail());
         Main.ctrl.body.setContent(ViewManager.getInstance().get("MovieDetail"));

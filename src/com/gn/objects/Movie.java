@@ -24,14 +24,17 @@ public class Movie {
     private String detail;
     private Button button;
     private ImageView picture;
+    private ImageView big_picture;
 
-    public Movie(int id ,String name , String detail , Image img){
+    public Movie(int id ,String name , String detail , Image img,Image big_img){
         this.id = id;
         this.name = name;
         this.detail = detail;
         this.button = new Button("รายละเอียด");
         this.picture = new ImageView(img);
+        this.big_picture = new ImageView(big_img);
     }
+
 
     public static HashMap<String,Movie> getMoviesData(Connection connection){
         HashMap<String,Movie> movies = new HashMap<>();
@@ -52,8 +55,9 @@ public class Movie {
                 }
                 os.close();
                 is.close();
-                Image image = new Image("file:picture.jpg",100,150,true,true);
-                movies.put(Integer.toString(movie_id),new Movie(movie_id,movie_name,movie_detail,image));
+                Image image = new Image("file:picture.jpg",130,170,true,true);
+                Image big_image = new Image("file:picture.jpg",542,782,true,true);
+                movies.put(Integer.toString(movie_id),new Movie(movie_id,movie_name,movie_detail,image,big_image));
             }
         } catch (Exception ex){
             ex.printStackTrace();
@@ -100,5 +104,9 @@ public class Movie {
 
     private void setButtonAction(EventHandler e){
         button.setOnAction(e);
+    }
+
+    public ImageView getBig_picture() {
+        return big_picture;
     }
 }

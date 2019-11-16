@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane prefHeight="1120.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.HomeController">
+<StackPane prefHeight="1120.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.HomeController">
     <children>
         <TabPane>
             <tabs>
@@ -16,7 +16,7 @@
                     <content>
                         <Pane fx:id="container" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="movie_list" layoutX="32.0" layoutY="81.0" prefHeight="541.0" prefWidth="969.0">
+                        <TableView fx:id="movie_list" layoutX="1.0" layoutY="1.0" prefHeight="1075.0" prefWidth="1200.0">
                           <columns>
                             <TableColumn fx:id="movie_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
                             <TableColumn fx:id="movie_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />

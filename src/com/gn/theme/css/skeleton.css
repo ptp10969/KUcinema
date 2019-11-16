@@ -2281,7 +2281,7 @@
 }
 
 .table-view {
-  -fx-fixed-cell-size : 40px;
+  -fx-fixed-cell-size : 200px;
 }
 
 .table-view .column-header-background .nested-column-header .table-column,

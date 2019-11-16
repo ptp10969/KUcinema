@@ -21,6 +21,9 @@ import com.gn.GNAvatarView;
 import com.gn.global.plugin.ViewManager;
 import com.gn.global.factory.AlertCell;
 import com.gn.objects.Movie;
+import com.gn.objects.Program;
+import com.gn.objects.Seat;
+import com.gn.objects.ShowTime;
 import com.jfoenix.controls.JFXBadge;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
@@ -51,7 +54,9 @@ import org.controlsfx.control.PopOver;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -115,8 +120,8 @@ public class Main implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
         ctrl = this;
+        Calendar currenttime = Calendar.getInstance();
         loadContentPopup();
-
         group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
