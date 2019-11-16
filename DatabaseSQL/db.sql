@@ -115,6 +115,24 @@ REPLACE INTO `showtimes` (`id`, `time`, `program_id`) VALUES
 	(3, '11.15', 4);
 /*!40000 ALTER TABLE `showtimes` ENABLE KEYS */;
 
+-- Dumping structure for table se_db.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table se_db.users: ~4 rows (approximately)
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+REPLACE INTO `users` (`user_id`, `name`, `email`, `password`) VALUES
+	('', '', '', ''),
+	('mekm', 'Mekmek', 'mekmek@mek.com', '123456789'),
+	('mmoklkl', 'Lsdk', 'mapa@gmail.com', '1233456789'),
+	('testtest', 'Mekzaza', 'mek@mek.com', '12345678');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

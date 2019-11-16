@@ -19,21 +19,25 @@ package com.gn.module.login;
 import animatefx.animation.*;
 import com.gn.App;
 import com.gn.GNAvatarView;
+import com.gn.decorator.GNDecorator;
 import com.gn.global.plugin.ViewManager;
 import com.gn.global.*;
 import com.gn.global.plugin.SectionManager;
 import com.gn.global.plugin.UserManager;
 import com.gn.global.util.Mask;
 import com.gn.module.main.Main;
+import com.gn.objects.Register;
 import javafx.animation.RotateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.*;
@@ -66,6 +70,10 @@ public class Account implements Initializable {
     @FXML private Label lbl_error;
 
     @FXML private Button register;
+    Stage window;
+    Scene scene1;
+
+
 
     private RotateTransition rotateTransition = new RotateTransition();
 
@@ -121,6 +129,12 @@ public class Account implements Initializable {
         } else {
             lbl_password.setVisible(true);
         }
+
+        Register register = new Register();
+        register.addUser(username.getText(),fullname.getText(),email.getText(),password.getText());
+
+
+
     }
 
     private void setProperties(){
