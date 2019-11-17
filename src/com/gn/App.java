@@ -108,6 +108,8 @@ public class App extends Application {
 
         load("movie","Home");
         load("movie","MovieDetail");
+        load("movie","ShowTime");
+        load("movie","Seat");
 
 //        System.out.println(ViewManager.getInstance().getSize());
 

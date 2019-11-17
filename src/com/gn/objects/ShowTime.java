@@ -60,4 +60,8 @@ public class ShowTime {
     public int getId() {
         return id;
     }
+
+    public String getTime() {
+        return time;
+    }
 }

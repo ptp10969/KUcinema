@@ -16,19 +16,29 @@
                     <content>
                         <Pane fx:id="container" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="movie_list" layoutX="1.0" layoutY="1.0" prefHeight="1075.0" prefWidth="1200.0">
+                        <TableView fx:id="program_list" layoutX="1.0" layoutY="1.0" prefHeight="1075.0" prefWidth="1200.0">
                           <columns>
-                            <TableColumn fx:id="movie_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
-                            <TableColumn fx:id="movie_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />
-                              <TableColumn fx:id="movie_column_detail" prefWidth="424.0" style="-fx-wrap-text: true;" text="เรื่องย่อ" />
-                              <TableColumn fx:id="movie_column_button" minWidth="0.0" prefWidth="98.0" style="-fx-alignment: center;" />
+                            <TableColumn fx:id="program_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
+                            <TableColumn fx:id="program_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />
+                              <TableColumn fx:id="program_column_detail" prefWidth="366.0" style="-fx-wrap-text: true;" text="เรื่องย่อ" />
+                              <TableColumn fx:id="program_column_button" minWidth="0.0" prefWidth="97.0" style="-fx-alignment: center;" />
+                              <TableColumn fx:id="program_column_button_showtime" minWidth="0.0" prefWidth="87.0" style="-fx-alignment: center;" />
                           </columns>
                         </TableView>
                      </children>
                         </Pane>
                     </content></Tab>
-                <Tab closable="false" text="เร็วๆนี้" />
-                <Tab closable="false" text="ทั้งหมด" />
+                <Tab closable="false" text="เร็วๆนี้">
+               <content>
+                  <TableView fx:id="movie_list" prefHeight="1075.0" prefWidth="1200.0">
+                     <columns>
+                        <TableColumn fx:id="movie_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
+                        <TableColumn fx:id="movie_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />
+                        <TableColumn fx:id="movie_column_detail" prefWidth="424.0" style="-fx-wrap-text: true;" text="เรื่องย่อ" />
+                        <TableColumn fx:id="movie_column_button" minWidth="0.0" prefWidth="98.0" style="-fx-alignment: center;" />
+                     </columns>
+                  </TableView>
+               </content></Tab>
             </tabs>
         </TabPane>
     </children>
