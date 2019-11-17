@@ -20,7 +20,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro8.JMetro;
+//import jfxtras.styles.jmetro8.JMetro;
 import org.scenicview.ScenicView;
 
 import java.io.File;
@@ -146,7 +146,8 @@ public class App extends Application {
         decorator.initTheme(GNDecorator.Theme.DEFAULT);
 //        decorator.fullBody();
 
-        String log = logged();
+//        String log = logged();
+        String log = "login";
         assert log != null;
 
         if (log.equals("account") || log.equals("login")) {

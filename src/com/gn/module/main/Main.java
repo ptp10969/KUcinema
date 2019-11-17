@@ -586,6 +586,8 @@ public class Main implements Initializable {
         body.setContent(ViewManager.getInstance().get("Home"));
     }
 
+
+
     @FXML
     private void areaChart(){
         title.setText("AreaChart");
