@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.SVGPath?>
 
-<ScrollPane fitToHeight="true" fitToWidth="true" prefWidth="225.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.main.Config">
+<ScrollPane fitToHeight="true" fitToWidth="true" prefWidth="225.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.main.Config">
    <content>
-      <VBox prefWidth="223.0">
+      <VBox prefWidth="210.0">
          <children>
             <Label alignment="BASELINE_LEFT" graphicTextGap="30.0" prefHeight="50.0" prefWidth="247.0" style="-fx-text-fill: -text-color;" styleClass="configTitle" text="Configuration">
                <padding>

@@ -623,6 +623,11 @@ public class Main implements Initializable {
         title.setText("ScrollBar");
         body.setContent(ViewManager.getInstance().get("scrollbar"));
     }
+    @FXML
+    private void addMovie(){
+        title.setText("addMovie");
+        body.setContent(ViewManager.getInstance().get("AddMovie"));
+    }
 
     @FXML
     private void treeTableView(){
