@@ -1,20 +1,21 @@
 package com.gn.objects;
 
+import animatefx.animation.Swing;
+import com.gn.Database.Database;
 import com.gn.module.movie.HomeController;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -35,6 +36,29 @@ public class Movie {
         this.big_picture = new ImageView(big_img);
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public void setButton(Button button) {
+        this.button = button;
+    }
+
+    public void setPicture(ImageView picture) {
+        this.picture = picture;
+    }
+
+    public void setBig_picture(ImageView big_picture) {
+        this.big_picture = big_picture;
+    }
 
     public static HashMap<String,Movie> getMoviesData(Connection connection){
         HashMap<String,Movie> movies = new HashMap<>();
@@ -101,7 +125,24 @@ public class Movie {
     public int getId() {
         return id;
     }
+    public static void create(File file,String name , String detail) throws IOException, SQLException {
+        byte[] byteArray = new byte[(int) file.length()];
+        FileInputStream inputStream =  new FileInputStream(file);
+        inputStream.read(byteArray);
+        Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
+        try {
+            Connection connection = Database.connect("localhost/se_db", "root", "");
+            String sql = "INSERT INTO movies(name,detail,picture)"
+                    + "VALUES(?,?,?)";
+            PreparedStatement pstmt = connection.prepareStatement(sql,
+                    Statement.RETURN_GENERATED_KEYS);
+            pstmt.setString(1,name);
+            pstmt.setString(2, detail);
+            pstmt.setBlob(3, blob) ;
+            pstmt.executeUpdate();
+        } catch (Exception ex){ }
 
+    }
     private void setButtonAction(EventHandler e){
         button.setOnAction(e);
     }
@@ -109,4 +150,6 @@ public class Movie {
     public ImageView getBig_picture() {
         return big_picture;
     }
+
+
 }
