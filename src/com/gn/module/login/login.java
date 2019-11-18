@@ -143,19 +143,25 @@ public class login implements Initializable {
 
     @FXML
     private void loginAction() throws Exception {
-        Pulse pulse = new Pulse(login);
-        pulse.setDelay(Duration.millis(20));
-        pulse.play();
-        if(validPassword() && validUsername())
+//        Pulse pulse = new Pulse(login);
+//        pulse.setDelay(Duration.millis(20));
+//        pulse.play();
+//        if(validPassword() && validUsername())
+//            enter();
+//        else {
+//            lbl_password.setVisible(true);
+//            lbl_username.setVisible(true);
+//        }
+        Register register = new Register();
+        ArrayList<String> str = register.login(username.getText(),password.getText());
+
+        if(str != null) {
             enter();
+        }
         else {
             lbl_password.setVisible(true);
             lbl_username.setVisible(true);
         }
-        Register register = new Register();
-        ArrayList<String> str = register.login(username.getText(),password.getText());
-
-        if(str != null) ;
     }
 
     private void enter() {
