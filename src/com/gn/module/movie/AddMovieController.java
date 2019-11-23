@@ -25,6 +25,8 @@ public class AddMovieController {
     @FXML
     TextField name;
     @FXML
+    TextField link;
+    @FXML
     TextArea detail;
 
     @FXML  ImageView myImageView;
@@ -55,7 +57,7 @@ public class AddMovieController {
         FileInputStream inputStream =  new FileInputStream(file);
         inputStream.read(byteArray);
         Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
-        movie.create(file,name.getText(),detail.getText());
+        movie.create(file,name.getText(),detail.getText(),link.getText());
 
 
 

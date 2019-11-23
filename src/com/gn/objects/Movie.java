@@ -128,20 +128,21 @@ public class Movie {
     public int getId() {
         return id;
     }
-    public static void create(File file,String name , String detail) throws IOException, SQLException {
+    public static void create(File file,String name , String detail,String link) throws IOException, SQLException {
         byte[] byteArray = new byte[(int) file.length()];
         FileInputStream inputStream =  new FileInputStream(file);
         inputStream.read(byteArray);
         Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
         try {
             Connection connection = Database.connect("localhost/se_db", "root", "");
-            String sql = "INSERT INTO movies(name,detail,picture)"
-                    + "VALUES(?,?,?)";
+            String sql = "INSERT INTO movies(name,detail,picture,link)"
+                    + "VALUES(?,?,?,?)";
             PreparedStatement pstmt = connection.prepareStatement(sql,
                     Statement.RETURN_GENERATED_KEYS);
             pstmt.setString(1,name);
             pstmt.setString(2, detail);
             pstmt.setBlob(3, blob) ;
+            pstmt.setString(4, link);
             pstmt.executeUpdate();
         } catch (Exception ex){ }
 
