@@ -91,7 +91,7 @@ public class Main implements Initializable {
     @FXML private JFXBadge bg_info;
     @FXML private ToggleGroup group;
 
-    
+
 
     @FXML private RadioButton available;
 
@@ -627,7 +627,7 @@ public class Main implements Initializable {
     }
     @FXML
     private void addMovie(){
-        title.setText("addMovie");
+        title.setText("เพิ่มภาพยนตร์");
         body.setContent(ViewManager.getInstance().get("AddMovie"));
     }
 
