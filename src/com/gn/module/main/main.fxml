@@ -40,7 +40,7 @@
                         <DropShadow color="#00000026" />
                      </effect>
                   </GNAvatarView>
-               <VBox fx:id="info" alignment="CENTER" minHeight="-Infinity" prefHeight="101.0" prefWidth="249.0">
+               <VBox fx:id="fullName" alignment="CENTER" minHeight="-Infinity" prefHeight="101.0" prefWidth="249.0">
                   <children>
                      <Label alignment="CENTER" prefHeight="32.0" prefWidth="166.0" style="-fx-text-fill: -text-color;" text="USERNAME" textAlignment="CENTER">
                         <VBox.margin>
@@ -128,7 +128,10 @@
                                  <SVGPath content="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" mouseTransparent="true" styleClass="icon" />
                               </graphic>
                            </Button>
-                           <Button nodeOrientation="LEFT_TO_RIGHT" onAction="#addMovie" onMouseClicked="#addMovie" prefWidth="250" styleClass="drawer-item" text="เพิ่มหนัง" />
+                           <Button alignment="BASELINE_LEFT" onAction="#addMovie" onMouseClicked="#addMovie" prefWidth="250" styleClass="drawer-item" text="     เพิ่มหนัง">
+                              <graphic>
+                                 <SVGPath content="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" mouseTransparent="true" styleClass="icon" />
+                              </graphic></Button>
                            <Button alignment="BASELINE_LEFT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#stackedBarChart" prefWidth="250" styleClass="drawer-item" text="ข้อมูลการชำระเงิน">
                               <graphic>
                                  <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" strokeType="INSIDE" styleClass="icon" />
