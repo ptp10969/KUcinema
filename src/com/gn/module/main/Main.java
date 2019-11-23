@@ -91,6 +91,8 @@ public class Main implements Initializable {
     @FXML private JFXBadge bg_info;
     @FXML private ToggleGroup group;
 
+    
+
     @FXML private RadioButton available;
 
     private FilteredList<Button> filteredList = null;
