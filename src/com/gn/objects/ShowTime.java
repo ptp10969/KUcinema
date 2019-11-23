@@ -52,6 +52,7 @@ public class ShowTime {
                 showTimes.add(new ShowTime(id,time,showtime_program_id,Seat.readSeat(connection,id)));
             }
         } catch (Exception ex){
+            System.out.println("read showtime Error");
             ex.printStackTrace();
         }
         return showTimes;

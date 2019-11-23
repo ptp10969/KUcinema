@@ -1,11 +1,5 @@
 package com.gn.objects;
 
-import javafx.scene.image.Image;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,6 +12,7 @@ public class Seat {
     private int reserve_by;
     private float price;
     private int showtime_id;
+    private String status;
 
     public Seat(int id, String seat_name, int reserve_by, float price, int showtime_id) {
         this.id = id;
@@ -25,11 +20,16 @@ public class Seat {
         this.reserve_by = reserve_by;
         this.price = price;
         this.showtime_id = showtime_id;
+        if (reserve_by != 0){
+            status = "not_empty";
+        } else {
+            status = "empty";
+        }
     }
 
     public static ArrayList<Seat> createSeats(Connection connection , int showtime_id){
         ArrayList<Seat> seats = new ArrayList<>();
-        for (int i = 0 ; i < 40 ; i++){
+        for (int i = 0 ; i < 41 ; i++){
             String name;
             float price = 100;
             if (i < 12){
@@ -72,6 +72,10 @@ public class Seat {
         return id;
     }
 
+    public int getReserve_by() {
+        return reserve_by;
+    }
+
     public static ArrayList<Seat> readSeat(Connection connection , int showtime_id){
         ArrayList<Seat> seats = new ArrayList<>();
         try {
@@ -87,8 +91,39 @@ public class Seat {
                 seats.add(new Seat(id,name,reserve_by,price,seat_showtime_id));
             }
         } catch (Exception ex){
+            System.out.println("read seat Error");
             ex.printStackTrace();
         }
         return seats;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+    public void setReserve_by(int reserve_by) {
+        this.reserve_by = reserve_by;
+    }
+
+    public boolean reserve(Connection connection ,int user_id){
+        String query = "UPDATE seats SET reserve_by = ? WHERE id = ? ;";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1,user_id);
+            preparedStatement.setInt(2,this.id);
+            preparedStatement.executeUpdate();
+        } catch (Exception ex){
+            return false;
+        }
+        return true;
+    }
+
+    public String getSeat_name() {
+        return seat_name;
     }
 }

@@ -5,6 +5,7 @@ import com.gn.module.main.Main;
 import com.gn.objects.Movie;
 import com.gn.objects.Program;
 import com.gn.objects.Seat;
+import com.gn.objects.ShowTime;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -69,6 +70,8 @@ public class HomeController {
         MovieDetailController.mdc.setImage(temp.getBig_picture());
         MovieDetailController.mdc.setTitle(temp.getName());
         MovieDetailController.mdc.setDetail(temp.getDetail());
+        MovieDetailController.mdc.setLink(temp.getYoutube_link());
+        MovieDetailController.mdc.runYoutubeVideo();
         Main.ctrl.body.setContent(ViewManager.getInstance().get("MovieDetail"));
     }
 
@@ -80,10 +83,12 @@ public class HomeController {
         for (int i = 1 ; i <= 4 ; i++){
             try {
                 ShowTimeController.stc.setButtonText(i , p.getShowTimes().get(i-1).getTime());
+                ShowTime showTime = p.getShowTimes().get(i-1);
                 ShowTimeController.stc.getButton(i).setOnAction( e ->
-                        seat(0));
+                        seat(showTime.getId()));
                 ShowTimeController.stc.setVisible(i,true);
             } catch (Exception ex){
+                System.out.println("No time");
                 ShowTimeController.stc.setVisible(i,false);
             }
 
@@ -92,6 +97,8 @@ public class HomeController {
     }
 
     @FXML public void seat(int showtime_id){
+        SeatController.sc.seats = Seat.readSeat(Main.ctrl.connection,showtime_id);
+        SeatController.sc.load();
         Main.ctrl.body.setContent(ViewManager.getInstance().get("Seat"));
     }
 

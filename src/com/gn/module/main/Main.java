@@ -120,6 +120,7 @@ public class Main implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
         ctrl = this;
+        System.out.println(Seat.readSeat(connection,3).get(0).getReserve_by());
         Calendar currenttime = Calendar.getInstance();
         loadContentPopup();
         group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {

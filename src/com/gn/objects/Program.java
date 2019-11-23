@@ -67,6 +67,7 @@ public class Program {
                 programs.put(Integer.toString(id),new Program(id,movies.get(Integer.toString(movie_id)),date,ShowTime.readShowTime(connection,id)));
             }
         } catch (Exception ex){
+            System.out.println("read Program Error");
             ex.printStackTrace();
         }
         return programs;

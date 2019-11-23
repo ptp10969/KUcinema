@@ -10,6 +10,7 @@ import com.gn.decorator.GNDecorator;
 import com.gn.decorator.options.ButtonType;
 import com.gn.module.loader.Loader;
 import com.gn.module.main.Main;
+import com.gn.module.movie.MovieDetailController;
 import com.sun.javafx.application.LauncherImpl;
 import javafx.application.Application;
 import javafx.application.HostServices;
@@ -19,10 +20,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-//import jfxtras.styles.jmetro8.JMetro;
-import org.scenicview.ScenicView;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -40,7 +40,6 @@ public class App extends Application {
     @Override
     public synchronized void init(){
         section = SectionManager.get();
-
         if(section.isLogged()){
             user = UserManager.get(section.getUserLogged());
             userDetail = new UserDetail(section.getUserLogged(), user.getFullName(), "subtitle");
@@ -184,10 +183,8 @@ public class App extends Application {
 
     @Override
     public  void start(Stage primary) {
-
         configServices();
         initialScene();
-
         stylesheets = decorator.getScene().getStylesheets();
 
         stylesheets.addAll(
@@ -267,4 +264,6 @@ public class App extends Application {
     public static UserDetail getUserDetail() {
         return userDetail;
     }
+
+
 }

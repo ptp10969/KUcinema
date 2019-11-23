@@ -1,4 +1,4 @@
-package sample;
+package com.gn.module.movie;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -8,14 +8,20 @@ import javafx.stage.Stage;
 public class VideoPlayer extends Application {
     public static void main(String[] args) { launch(args); }
 
+    public static WebView webView;
+
+    public VideoPlayer(){
+        webView = new WebView();
+    }
+
     @Override public void start(Stage stage) throws Exception {
-        WebView webview = new WebView();
-        webview.getEngine().load(
+        webView = new WebView();
+        webView.getEngine().load(
                 "https://www.youtube.com/embed/F6QaLsw8EWY"
         );
-        webview.setPrefSize(640, 390);
-
-        stage.setScene(new Scene(webview));
+        webView.setPrefSize(640, 390);
+        Scene scene = new Scene(webView);
+        stage.setScene(scene);
         stage.show();
     }
 }

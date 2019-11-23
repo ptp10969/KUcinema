@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
@@ -42,76 +37,12 @@
                                         <Image url="@../media/movies/3.jpg" />
                                     </image>
                                 </ImageView>
-                                <VBox prefHeight="393.0" prefWidth="800.0">
-                                    <children>
-                                        <AnchorPane>
-                                            <children>
-                                                <VBox alignment="CENTER" layoutY="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
-                                                    <children>
-                                                        <MediaView fx:id="mediaView" fitHeight="330.0" fitWidth="800.0">
-                                                            <viewport>
-                                                                <Rectangle2D />
-                                                            </viewport>
-                                                        </MediaView>
-                                                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="462.0">
-                                                            <children>
-                                                                <JFXButton contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#play" prefHeight="30.0" prefWidth="40.0" ripplerFill="#000000c7" text="Play">
-                                                                    <graphic>
-                                                                        <FontAwesomeIconView fx:id="icon" fill="#00000080" glyphName="PLAY" style="-fx-fill: -icon-color;" />
-                                                                    </graphic>
-                                                                    <styleClass>
-                                                                        <String fx:value="btn-transparent" />
-                                                                        <String fx:value="round" />
-                                                                    </styleClass>
-                                                                </JFXButton>
-                                                                <Slider fx:id="slider" prefHeight="16.0" prefWidth="266.0" />
-                                                                <Label fx:id="playTime" prefHeight="15.0" prefWidth="95.0" style="-fx-text-fill: -text-color;" text="Label" />
-                                                                <Label prefHeight="17.0" prefWidth="88.0" style="-fx-text-fill: -text-color;" text="Volume" />
-                                                                <Slider fx:id="volumeSlider" prefHeight="18.0" prefWidth="81.0" />
-                                                            </children>
-                                                        </HBox>
-                                                    </children>
-                                                </VBox>
-                                            </children>
-                                        </AnchorPane>
-                                    </children>
-                                </VBox>
+                                <VBox fx:id="vbox" prefHeight="393.0" prefWidth="800.0">
+                           <children>
+                              <Pane fx:id="pane" prefHeight="392.0" prefWidth="651.0" />
+                           </children></VBox>
                             </children>
                         </HBox>
-                    </children>
-                </VBox>
-                <VBox alignment="CENTER_LEFT">
-                    <children>
-                        <Label prefHeight="38.0" prefWidth="195.0" text="ประเภท: Drama">
-                            <styleClass>
-                                <String fx:value="h4" />
-                                <String fx:value="sub-title" />
-                            </styleClass>
-                        </Label>
-                        <Label prefHeight="27.0" prefWidth="218.0" text="เข้าฉาย: 19 พฤศจิกายน 2019">
-                            <styleClass>
-                                <String fx:value="h4" />
-                                <String fx:value="sub-title" />
-                            </styleClass>
-                        </Label>
-                        <Label prefHeight="38.0" prefWidth="195.0" text="เวลา: 120 นาที">
-                            <styleClass>
-                                <String fx:value="h4" />
-                                <String fx:value="sub-title" />
-                            </styleClass>
-                        </Label>
-                        <Label prefHeight="38.0" prefWidth="195.0" text="ผู้กำกับ: Wu Jian Xin">
-                            <styleClass>
-                                <String fx:value="h4" />
-                                <String fx:value="sub-title" />
-                            </styleClass>
-                        </Label>
-                        <Label prefHeight="27.0" prefWidth="313.0" text="นักแสดงนำ: Park Solomon,Wang Zi Xian">
-                            <styleClass>
-                                <String fx:value="h4" />
-                                <String fx:value="sub-title" />
-                            </styleClass>
-                        </Label>
                     </children>
                 </VBox>
                 <VBox alignment="CENTER_LEFT">

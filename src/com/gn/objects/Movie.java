@@ -26,14 +26,16 @@ public class Movie {
     private Button button;
     private ImageView picture;
     private ImageView big_picture;
+    private String youtube_link;
 
-    public Movie(int id ,String name , String detail , Image img,Image big_img){
+    public Movie(int id ,String name , String detail , Image img,Image big_img , String youtube_link){
         this.id = id;
         this.name = name;
         this.detail = detail;
         this.button = new Button("รายละเอียด");
         this.picture = new ImageView(img);
         this.big_picture = new ImageView(big_img);
+        this.youtube_link = youtube_link;
     }
 
     public void setId(int id) {
@@ -71,6 +73,7 @@ public class Movie {
                 String movie_name = resultSet.getString(2);
                 String movie_detail = resultSet.getString(3);
                 InputStream is = resultSet.getBinaryStream(4);
+                String youtube_link = resultSet.getString(5);
                 OutputStream os = new FileOutputStream(new File("picture.jpg"));
                 byte[] content = new byte[1024];
                 int size = 0;
@@ -81,7 +84,7 @@ public class Movie {
                 is.close();
                 Image image = new Image("file:picture.jpg",130,170,true,true);
                 Image big_image = new Image("file:picture.jpg",542,782,true,true);
-                movies.put(Integer.toString(movie_id),new Movie(movie_id,movie_name,movie_detail,image,big_image));
+                movies.put(Integer.toString(movie_id),new Movie(movie_id,movie_name,movie_detail,image,big_image,youtube_link));
             }
         } catch (Exception ex){
             ex.printStackTrace();
@@ -151,5 +154,7 @@ public class Movie {
         return big_picture;
     }
 
-
+    public String getYoutube_link() {
+        return youtube_link;
+    }
 }
