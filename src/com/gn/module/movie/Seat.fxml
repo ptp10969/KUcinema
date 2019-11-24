@@ -43,11 +43,12 @@
                 <Text layoutX="467.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ราคา 100 บาท" wrappingWidth="79.283203125" />
                 <Text layoutX="630.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งพิเศษ" wrappingWidth="68.283203125" />
                 <Text layoutX="630.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ราคา 250 บาท" wrappingWidth="79.283203125" />
-            <Button fx:id="accept" layoutX="855.0" layoutY="540.0" mnemonicParsing="false" onAction="#acceptButtonOnClick" prefWidth="79.0" text="ยืนยัน" />
-            <Label layoutX="950.0" layoutY="204.0" text="A1-A12" />
-            <Label layoutX="952.0" layoutY="300.0" text="B1-B12" />
-            <Label layoutX="951.0" layoutY="404.0" text="C1-C12" />
-            <Label layoutX="953.0" layoutY="479.0" text="D1-D5" />
+            <Button fx:id="accept" layoutX="875.0" layoutY="540.0" mnemonicParsing="false" onAction="#acceptButtonOnClick" prefWidth="79.0" text="ยืนยัน" />
+            <Label layoutX="960.0" layoutY="205.0" text="A1-A12" />
+            <Label layoutX="961.0" layoutY="300.0" text="B1-B12" />
+            <Label layoutX="960.0" layoutY="404.0" text="C1-C12" />
+            <Label layoutX="962.0" layoutY="479.0" text="D1-D5" />
+            <Button fx:id="refresh" layoutX="757.0" layoutY="542.0" mnemonicParsing="false" onAction="#refreshButtonOnClick" prefWidth="79.0" text="Refresh" />
             </children>
         </Pane>
     </children>

@@ -1,9 +1,6 @@
 package com.gn.objects;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class Seat {
@@ -111,13 +108,15 @@ public class Seat {
     }
 
     public boolean reserve(Connection connection ,int user_id){
-        String query = "UPDATE seats SET reserve_by = ? WHERE id = ? ;";
+        String query = "UPDATE seats SET reserve_by = ? WHERE id = ? AND reserve_by = 0;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1,user_id);
             preparedStatement.setInt(2,this.id);
-            preparedStatement.executeUpdate();
-        } catch (Exception ex){
+            if (preparedStatement.executeUpdate() == 0){
+                return false;
+            }
+        } catch (SQLException ex){
             return false;
         }
         return true;

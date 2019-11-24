@@ -25,6 +25,10 @@ public class SeatController {
     @FXML
     Button accept;
 
+    @FXML
+    Button refresh;
+
+    public int st_id;
     public ArrayList<Seat> seats;
     public static SeatController sc;
     public Alert alert;
@@ -32,10 +36,9 @@ public class SeatController {
     public void initialize(){
         sc = this;
         Platform.runLater(new Runnable() {
-
             @Override
             public void run() {
-                alert = new Alert(Alert.AlertType.WARNING);
+                alert = new Alert(Alert.AlertType.INFORMATION);
             }
         });
     }
@@ -43,25 +46,27 @@ public class SeatController {
     public void load(){
         int x = 44;
         int y = 182;
-        for (int i = 0 ; i < 36 ; i++){
+        for (int i = 0 ; i < 36 ; i++) {
             Seat seat = seats.get(i);
             ImageView temp = new ImageView();
-            if (seat.getStatus().equals("empty")){
+            if (seat.getStatus().equals("empty")) {
                 temp.setImage(new Image("com/gn/module/media/chair/c1.png"));
                 temp.setOnMouseClicked(new EventHandler<MouseEvent>() {
                                            @Override
                                            public void handle(MouseEvent event) {
                                                MouseButton button = event.getButton();
-                                               if(button==MouseButton.PRIMARY){
+                                               if (button == MouseButton.PRIMARY) {
                                                    temp.setImage(new Image("com/gn/module/media/chair/c2.png"));
                                                    seat.setStatus("selected");
-                                               }else if(button==MouseButton.SECONDARY) {
+                                               } else if (button == MouseButton.SECONDARY) {
                                                    temp.setImage(new Image("com/gn/module/media/chair/c1.png"));
                                                    seat.setStatus("empty");
                                                }
                                            }
                                        }
                 );
+            } else if (seat.getReserve_by() == 1 || seat.getStatus().equals("you")){
+                temp.setImage(new Image("com/gn/module/media/chair/c7.png"));
             } else {
                 temp.setImage(new Image("com/gn/module/media/chair/c3.png"));
             }
@@ -98,6 +103,8 @@ public class SeatController {
                                            }
                                        }
                 );
+            } else if (seat.getReserve_by() == 1 || seat.getStatus().equals("you")){
+                temp.setImage(new Image("com/gn/module/media/chair/c8.png"));
             } else {
                 temp.setImage(new Image("com/gn/module/media/chair/c6.png"));
             }
@@ -117,11 +124,21 @@ public class SeatController {
             if (s.getStatus().equals("selected")){
                 if (s.reserve(Main.ctrl.connection,1)){
                     alert.setContentText("จองที่นั่ง " + s.getSeat_name() + " สำเร็จ");
+                    alert.setHeaderText("จองที่นั่งสำเร็จ");
+                    s.setStatus("you");
                 } else {
-                    alert.setContentText("จองที่นั่ง " + s.getSeat_name() + " ไม่สำเร็จ");
+                    alert.setContentText("จองที่นั่ง " + s.getSeat_name() + " ไม่สำเร็จ กรุณา Refresh ที่นั่ง");
+                    alert.setHeaderText("จองที่นั่งไม่สำเร็จ");
                 }
                 alert.showAndWait();
+                load();
             }
         }
+    }
+
+    @FXML
+    public void refreshButtonOnClick(ActionEvent e){
+        seats = Seat.readSeat(Main.ctrl.connection,st_id);
+        load();
     }
 }

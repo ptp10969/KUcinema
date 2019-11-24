@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `picture` longblob NOT NULL,
   `link` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table se_db.movies: ~4 rows (approximately)
 /*!40000 ALTER TABLE `movies` DISABLE KEYS */;
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `programs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table se_db.programs: ~0 rows (approximately)
+-- Dumping data for table se_db.programs: ~1 rows (approximately)
 /*!40000 ALTER TABLE `programs` DISABLE KEYS */;
 REPLACE INTO `programs` (`id`, `movie_id`, `date`) VALUES
 	(4, 7, '2019-11-16');
@@ -53,7 +53,7 @@ REPLACE INTO `programs` (`id`, `movie_id`, `date`) VALUES
 CREATE TABLE IF NOT EXISTS `seats` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `reserve_by` bigint(20) DEFAULT NULL,
+  `reserve_by` bigint(20) unsigned NOT NULL DEFAULT '0',
   `price` float NOT NULL DEFAULT '0',
   `showtime_id` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
@@ -62,9 +62,9 @@ CREATE TABLE IF NOT EXISTS `seats` (
 -- Dumping data for table se_db.seats: ~41 rows (approximately)
 /*!40000 ALTER TABLE `seats` DISABLE KEYS */;
 REPLACE INTO `seats` (`id`, `name`, `reserve_by`, `price`, `showtime_id`) VALUES
-	(482, 'A1', NULL, 100, 3),
+	(482, 'A1', 2, 100, 3),
 	(483, 'A2', 1, 100, 3),
-	(484, 'A3', NULL, 100, 3),
+	(484, 'A3', 1, 100, 3),
 	(485, 'A4', 1, 100, 3),
 	(486, 'A5', 1, 100, 3),
 	(487, 'A6', 1, 100, 3),
@@ -72,37 +72,37 @@ REPLACE INTO `seats` (`id`, `name`, `reserve_by`, `price`, `showtime_id`) VALUES
 	(489, 'A8', 1, 100, 3),
 	(490, 'A9', 1, 100, 3),
 	(491, 'A10', 1, 100, 3),
-	(492, 'A11', NULL, 100, 3),
-	(493, 'A12', NULL, 100, 3),
-	(494, 'B1', NULL, 100, 3),
-	(495, 'B2', NULL, 100, 3),
-	(496, 'B3', NULL, 100, 3),
-	(497, 'B4', NULL, 100, 3),
+	(492, 'A11', 0, 100, 3),
+	(493, 'A12', 1, 100, 3),
+	(494, 'B1', 1, 100, 3),
+	(495, 'B2', 1, 100, 3),
+	(496, 'B3', 1, 100, 3),
+	(497, 'B4', 1, 100, 3),
 	(498, 'B5', 1, 100, 3),
 	(499, 'B6', 1, 100, 3),
 	(500, 'B7', 1, 100, 3),
 	(501, 'B8', 1, 100, 3),
 	(502, 'B9', 1, 100, 3),
 	(503, 'B10', 1, 100, 3),
-	(504, 'B11', NULL, 100, 3),
-	(505, 'B12', NULL, 100, 3),
-	(506, 'C1', NULL, 100, 3),
-	(507, 'C2', NULL, 100, 3),
-	(508, 'C3', NULL, 100, 3),
-	(509, 'C4', NULL, 100, 3),
-	(510, 'C5', NULL, 100, 3),
-	(511, 'C6', NULL, 100, 3),
-	(512, 'C7', NULL, 100, 3),
-	(513, 'C8', NULL, 100, 3),
-	(514, 'C9', NULL, 100, 3),
-	(515, 'C10', NULL, 100, 3),
-	(516, 'C11', NULL, 100, 3),
-	(517, 'C12', NULL, 100, 3),
-	(518, 'D1', NULL, 250, 3),
-	(519, 'D2', NULL, 250, 3),
-	(520, 'D3', NULL, 250, 3),
-	(521, 'D4', NULL, 250, 3),
-	(522, 'D5', NULL, 250, 3);
+	(504, 'B11', 1, 100, 3),
+	(505, 'B12', 0, 100, 3),
+	(506, 'C1', 2, 100, 3),
+	(507, 'C2', 2, 100, 3),
+	(508, 'C3', 1, 100, 3),
+	(509, 'C4', 1, 100, 3),
+	(510, 'C5', 1, 100, 3),
+	(511, 'C6', 1, 100, 3),
+	(512, 'C7', 1, 100, 3),
+	(513, 'C8', 1, 100, 3),
+	(514, 'C9', 1, 100, 3),
+	(515, 'C10', 2, 100, 3),
+	(516, 'C11', 1, 100, 3),
+	(517, 'C12', 2, 100, 3),
+	(518, 'D1', 0, 250, 3),
+	(519, 'D2', 0, 250, 3),
+	(520, 'D3', 1, 250, 3),
+	(521, 'D4', 0, 250, 3),
+	(522, 'D5', 1, 250, 3);
 /*!40000 ALTER TABLE `seats` ENABLE KEYS */;
 
 -- Dumping structure for table se_db.showtimes
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `showtimes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table se_db.showtimes: ~0 rows (approximately)
+-- Dumping data for table se_db.showtimes: ~1 rows (approximately)
 /*!40000 ALTER TABLE `showtimes` DISABLE KEYS */;
 REPLACE INTO `showtimes` (`id`, `time`, `program_id`) VALUES
 	(3, '11.15', 4);
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table se_db.users: ~4 rows (approximately)
+-- Dumping data for table se_db.users: ~5 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 REPLACE INTO `users` (`user_id`, `name`, `email`, `password`) VALUES
 	('', '', '', ''),

@@ -53,12 +53,11 @@ public class HomeController {
             p.getButton().setOnAction(e ->
                     showTime(Integer.toString(p.getId())));
         }
-        addMovie();
+        refresh();
         movie_column_name.setCellValueFactory(new PropertyValueFactory<>("name"));
         movie_column_detail.setCellValueFactory(new PropertyValueFactory<>("detail"));
         movie_column_button.setCellValueFactory(new PropertyValueFactory<>("button"));
         movie_column_picture.setCellValueFactory(new PropertyValueFactory<>("picture"));
-        program_list.getItems().addAll(getProgram());
         program_column_name.setCellValueFactory(new PropertyValueFactory<>("movieName"));
         program_column_detail.setCellValueFactory(new PropertyValueFactory<>("movieDetail"));
         program_column_button.setCellValueFactory(new PropertyValueFactory<>("movieDetailButton"));
@@ -97,6 +96,7 @@ public class HomeController {
     }
 
     @FXML public void seat(int showtime_id){
+        SeatController.sc.st_id = showtime_id;
         SeatController.sc.seats = Seat.readSeat(Main.ctrl.connection,showtime_id);
         SeatController.sc.load();
         Main.ctrl.body.setContent(ViewManager.getInstance().get("Seat"));
@@ -122,5 +122,12 @@ public class HomeController {
             p.add(programs.get(k));
         }
         return p;
+    }
+
+    public void refresh(){
+        movie_list.getItems().clear();
+        addMovie();
+        program_list.getItems().clear();
+        program_list.getItems().addAll(getProgram());
     }
 }
