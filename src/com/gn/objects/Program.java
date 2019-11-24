@@ -1,6 +1,8 @@
 package com.gn.objects;
 
+import com.gn.Database.Database;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.image.ImageView;
 
 import java.sql.*;
@@ -30,8 +32,10 @@ public class Program {
         this.button = new Button("จอง");
     }
 
-    public static Program create(Connection connection , Movie movie , Date date){
+    public static Program create( Movie movie , Date date){
         Program program = null;
+        Connection connection = Database.connect("localhost/se_db", "root", "");
+
         try {
             String sql = "INSERT INTO programs(movie_id,date)"
                     + "VALUES(?,?)";
@@ -46,7 +50,9 @@ public class Program {
             resultSet.first();
             int id = resultSet.getInt(1);
             program = new Program(id,movie,date);
-        } catch (Exception ex){ }
+        } catch (Exception ex){
+            System.out.println("fuck");
+        }
         return program;
     }
 
@@ -58,6 +64,7 @@ public class Program {
         HashMap<String,Program> programs = new HashMap<>();
         try {
             String query = "Select * from programs";
+
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){

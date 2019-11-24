@@ -110,6 +110,7 @@ public class App extends Application {
         load("movie","ShowTime");
         load("movie","Seat");
         load("movie","AddMovie");
+        load("movie","AddProgram");
 //        System.out.println(ViewManager.getInstance().getSize());
 
         // delay

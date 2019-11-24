@@ -28,6 +28,7 @@ public class Movie {
     private ImageView big_picture;
     private String youtube_link;
 
+
     public Movie(int id ,String name , String detail , Image img,Image big_img , String youtube_link){
         this.id = id;
         this.name = name;
@@ -35,6 +36,12 @@ public class Movie {
         this.button = new Button("รายละเอียด");
         this.picture = new ImageView(img);
         this.big_picture = new ImageView(big_img);
+        this.youtube_link = youtube_link;
+    }
+    public Movie(int id ,String name , String detail , String youtube_link){
+        this.id = id;
+        this.name = name;
+        this.detail = detail;
         this.youtube_link = youtube_link;
     }
 
