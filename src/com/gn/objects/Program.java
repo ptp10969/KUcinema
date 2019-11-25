@@ -51,13 +51,14 @@ public class Program {
             int id = resultSet.getInt(1);
             program = new Program(id,movie,date);
         } catch (Exception ex){
-            System.out.println("fuck");
+
         }
         return program;
     }
 
-    public void addShowTime(Connection connection , String showtime){
-        showTimes.add(ShowTime.createShowTime(connection,showtime,id));
+    public void addShowTime(String showtime){
+        Connection connection = Database.connect("localhost/se_db", "root", "");
+        //showTimes.add(ShowTime.createShowTime(connection,showtime,id,date));
     }
 
     public static HashMap<String,Program> readProgram(Connection connection , HashMap<String,Movie> movies){
