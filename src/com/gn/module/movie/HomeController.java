@@ -22,6 +22,8 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+
 public class HomeController {
     @FXML private Pane container;
     @FXML TableView<Movie> movie_list;
@@ -130,4 +132,5 @@ public class HomeController {
         program_list.getItems().clear();
         program_list.getItems().addAll(getProgram());
     }
+
 }
