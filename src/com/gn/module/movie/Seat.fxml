@@ -41,7 +41,6 @@
                 </ImageView>
                 <Text layoutX="466.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งถูกจอง" wrappingWidth="67.283203125" />
                 <Text layoutX="630.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งของเรา" wrappingWidth="68.283203125" />
-            <Button fx:id="accept" layoutX="875.0" layoutY="540.0" mnemonicParsing="false" onAction="#acceptButtonOnClick" prefWidth="79.0" text="ยืนยัน" />
             <Label layoutX="960.0" layoutY="205.0" text="A1-A12" />
             <Label layoutX="961.0" layoutY="300.0" text="B1-B12" />
             <Label layoutX="960.0" layoutY="404.0" text="C1-C12" />
@@ -68,6 +67,7 @@
                </image>
             </ImageView>
             <Text layoutX="273.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งว่าง" wrappingWidth="72.283203125" />
+            <Button layoutX="853.0" layoutY="542.0" mnemonicParsing="false" onMouseClicked="#success" prefWidth="79.0" styleClass="btn-success" text="ยืนยัน" />
             </children>
         </Pane>
     </children>
