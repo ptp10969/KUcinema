@@ -7,13 +7,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="438.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.AddProgramController">
+<AnchorPane prefHeight="438.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.AddProgramController">
    <children>
       <ComboBox fx:id="comboBoxx" layoutX="271.0" layoutY="82.0" prefWidth="150.0" />
       <Label layoutX="199.0" layoutY="86.0" text="ชื่อหนัง :" />
       <DatePicker fx:id="date" layoutX="271.0" layoutY="135.0" prefHeight="25.0" prefWidth="150.0" promptText="date" />
       <Label layoutX="206.0" layoutY="139.0" text="วันที่ :" />
-      <Button fx:id="addProgram" layoutX="576.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleClickAddProgram" onMouseDragEntered="#handleClickAddProgram" text="เพิ่มโปรแกรม" />
+      <Button fx:id="addProgram" layoutX="576.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleClickAddProgram" onMouseDragEntered="#handleClickAddProgram" styleClass="btn-success" text="เพิ่มโปรแกรม" />
       <Button layoutX="435.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleClickCheckDate" onMouseDragEntered="#handleClickAddProgram" prefHeight="25.0" prefWidth="74.0" text="เช็ควันที่" />
       <Label layoutX="188.0" layoutY="188.0" text="เลือกรอบ :" />
       <CheckBox fx:id="time9" layoutX="271.0" layoutY="188.0" mnemonicParsing="false" text="9.00น." />
