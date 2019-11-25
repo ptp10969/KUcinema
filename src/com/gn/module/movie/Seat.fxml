@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Text?>
 
-<StackPane prefHeight="1120.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.SeatController">
+<StackPane prefHeight="1120.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.SeatController">
     <stylesheets>
         <URL value="@../../theme/css/material-color.css" />
         <URL value="@../../theme/css/skeleton.css" />
@@ -24,14 +24,14 @@
     <children>
         <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0">
             <children>
-                <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="413.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="362.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../media/chair/c1.png" />
+                        <Image url="@../media/chair/c3.png" />
                     </image>
                 </ImageView>
-                <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="580.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="409.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../media/chair/c4.png" />
+                        <Image url="@../media/chair/c6.png" />
                     </image>
                 </ImageView>
                 <ImageView fitHeight="72.0" fitWidth="985.0" layoutX="72.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
@@ -39,16 +39,35 @@
                         <Image url="@../media/chair/screen.png" />
                     </image>
                 </ImageView>
-                <Text layoutX="466.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งธรรมดา" wrappingWidth="67.283203125" />
-                <Text layoutX="467.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ราคา 100 บาท" wrappingWidth="79.283203125" />
-                <Text layoutX="630.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งพิเศษ" wrappingWidth="68.283203125" />
-                <Text layoutX="630.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ราคา 250 บาท" wrappingWidth="79.283203125" />
+                <Text layoutX="466.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งถูกจอง" wrappingWidth="67.283203125" />
+                <Text layoutX="630.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งของเรา" wrappingWidth="68.283203125" />
             <Button fx:id="accept" layoutX="875.0" layoutY="540.0" mnemonicParsing="false" onAction="#acceptButtonOnClick" prefWidth="79.0" text="ยืนยัน" />
             <Label layoutX="960.0" layoutY="205.0" text="A1-A12" />
             <Label layoutX="961.0" layoutY="300.0" text="B1-B12" />
             <Label layoutX="960.0" layoutY="404.0" text="C1-C12" />
             <Label layoutX="962.0" layoutY="479.0" text="D1-D5" />
             <Button fx:id="refresh" layoutX="757.0" layoutY="542.0" mnemonicParsing="false" onAction="#refreshButtonOnClick" prefWidth="79.0" text="Refresh" />
+            <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="533.0" layoutY="539.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/chair/c7.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="580.0" layoutY="539.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/chair/c8.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="179.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/chair/c1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="226.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/chair/c4.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="273.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="ที่นั่งว่าง" wrappingWidth="72.283203125" />
             </children>
         </Pane>
     </children>
