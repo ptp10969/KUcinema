@@ -22,7 +22,7 @@
          <children>
             <ImageView fitHeight="357.0" fitWidth="489.0" layoutX="462.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
                <image>
-                  <Image url="@../media/predios-e-vetores-3fee7.jpg" />
+                  <Image url="@../media/predios-e-vetores-3fee8.jpg" />
                </image>
                <effect>
                   <ColorAdjust />

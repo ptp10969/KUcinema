@@ -33,7 +33,7 @@
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="742.0" prefWidth="238.0">
                      <children>
-                        <ImageView fitHeight="226.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="256.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../media/img/profile.jpg" />
                            </image>
@@ -132,7 +132,7 @@
                                     <VBox>
                                        <children>
                                           <Label fx:id="fullName" style="-fx-font-weight: bold;" styleClass="h3" text="USERNAME" />
-                                          <Hyperlink prefHeight="23.0" prefWidth="119.0" text="นักศึกษาชั้นปี่ที  3">
+                                          <Hyperlink prefHeight="48.0" prefWidth="131.0" text="นักศึกษาชั้นปี่ที  3">
                                              <font>
                                                 <Font size="59.0" />
                                              </font></Hyperlink>
