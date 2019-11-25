@@ -9,27 +9,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Register {
+    private String id;
     private String userId ;
     private String name;
     private String email;
-    private String password;
+    private String password;;
+    private String roles;
 
-    public void addUser(String userId, String name, String email, String password) throws Exception {
-        try {
-            Connection connection = Database.connect("localhost/se_db", "root", "");
-            String query = "INSERT INTO users(user_id,name,email,password) VALUES ('" + userId + "', '" + name +
-                    "', '"+email+"','"+password+"') ";
-//            Statement statement = connection.createStatement();
-//            ResultSet resultSet = statement.executeQuery(query);
-
-            PreparedStatement psmt = connection.prepareStatement(query);
-            psmt.execute();
-
-            connection.close();
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
-    }
 
     public ArrayList<String> login(String userId, String password) throws Exception {
         ArrayList<String> str = new ArrayList<>();
@@ -54,6 +40,22 @@ public class Register {
         else return null;
     }
 
+    public Register getUser(String userId) throws Exception{
+        try {
+            Connection connection = Database.connect("localhost/se_db", "root", "");
+            String query = "SELECT * FROM users WHERE user_id = '" +userId+"'";
+
+            Statement psmt = connection.createStatement();
+            ResultSet rs = psmt.executeQuery(query);
+
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+        return null;
+    }
+
+
     public String getUserId() {
         return userId;
     }
@@ -64,6 +66,22 @@ public class Register {
 
     public String getName() {
         return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 
     public void setName(String name) {

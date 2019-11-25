@@ -60,7 +60,7 @@ public class User {
         this.email = email;
     }
 
-    public String getUserName() {
+    public  String getUserName() {
         return userName;
     }
 

@@ -20,6 +20,7 @@ import animatefx.animation.Flash;
 import animatefx.animation.Pulse;
 import animatefx.animation.SlideInLeft;
 import com.gn.App;
+import com.gn.Database.Database;
 import com.gn.GNAvatarView;
 import com.gn.global.plugin.ViewManager;
 import com.gn.global.*;
@@ -40,6 +41,9 @@ import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Timer;
@@ -141,6 +145,7 @@ public class login implements Initializable {
         return !username.getText().isEmpty() && username.getLength() > 3;
     }
 
+
     @FXML
     private void loginAction() throws Exception {
 //        Pulse pulse = new Pulse(login);
@@ -155,6 +160,7 @@ public class login implements Initializable {
         Register register = new Register();
         ArrayList<String> str = register.login(username.getText(),password.getText());
 
+
         if(str != null) {
             enter();
         }
@@ -163,6 +169,28 @@ public class login implements Initializable {
             lbl_username.setVisible(true);
         }
     }
+//    public ArrayList<String> login(String userId, String password) throws Exception {
+//        ArrayList<String> str = new ArrayList<>();
+//        try {
+//            Connection connection = Database.connect("localhost/se_db", "root", "");
+//            String query = "SELECT * FROM users WHERE user_id = '" +userId+"' AND password = '" +password+"'";
+//
+//            Statement psmt = connection.createStatement();
+//            ResultSet rs = psmt.executeQuery(query);
+//
+//            str.add(rs.getString("user_id"));
+//            str.add(rs.getString("name"));
+//
+//            connection.close();
+//
+//        } catch (Exception ex){
+//            ex.printStackTrace();
+//        }
+//
+//        if(str != null)
+//            return str;
+//        else return null;
+//    }
 
     private void enter() {
 
