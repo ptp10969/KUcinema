@@ -641,6 +641,7 @@ public class Main implements Initializable {
     @FXML
     private void addMovie(){
         title.setText("เพิ่มภาพยนตร์");
+        System.out.println(user.getUsername());
         body.setContent(ViewManager.getInstance().get("AddMovie"));
     }
     @FXML

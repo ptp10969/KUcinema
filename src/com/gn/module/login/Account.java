@@ -45,6 +45,9 @@ import java.io.*;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -113,13 +116,18 @@ public class Account implements Initializable {
             File directory = new File("user/");
             File file = new File("user/" + user + "." + extension);
 
+            Register register = new Register();
+            register.addUser(username.getText(),fullname.getText(),email.getText(),password.getText());
+
+            Register users = login(username.getText(),password.getText());
+
             if (!directory.exists()) {
                 directory.mkdir();
                 file.createNewFile();
-                setProperties();
+                setProperties(users);
             } else if (!file.exists()) {
                 file.createNewFile();
-                setProperties();
+                setProperties(users);
             } else {
                 lbl_error.setVisible(true);
             }
@@ -132,14 +140,41 @@ public class Account implements Initializable {
         } else {
             lbl_password.setVisible(true);
         }
-        Register register = new Register();
-        register.addUser(username.getText(),fullname.getText(),email.getText(),password.getText());
-
 
     }
 
+    public Register login(String username, String password) throws Exception {
+        ArrayList<String> str = new ArrayList<>();
+        Register user = new Register();
+        try {
+            Connection connection = Database.connect("localhost/se_db", "root", "");
+            String query = "SELECT * FROM users WHERE username = '" +username+"' AND password = '" +password+"'";
 
-    private void setProperties(){
+            Statement psmt = connection.createStatement();
+            ResultSet rs = psmt.executeQuery(query);
+
+            while(rs.next()) {
+                user.setUser_Id(rs.getString("id"));
+                user.setUsername(rs.getString("username"));
+                user.setName(rs.getString("name"));
+                user.setEmail(rs.getString("email"));
+                user.setPassword(rs.getString("password"));
+                user.setRoles(rs.getString("roles"));
+            }
+            connection.close();
+
+
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+        if(user != null)
+            return user;
+        else return null;
+    }
+
+
+    private void setProperties(Register users){
 
             Section section = new Section(true, username.getText());
             SectionManager.save(section);
@@ -172,7 +207,8 @@ public class Account implements Initializable {
 
                     App.decorator.removeCustom(detail);
             });
-
+            Main.ctrl.setUser(users);
+            Main.ctrl.fullname.setText(users.getUsername());
             App.decorator.setContent(ViewManager.getInstance().get("main"));
     }
 
