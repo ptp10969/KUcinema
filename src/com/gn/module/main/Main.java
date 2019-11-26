@@ -121,15 +121,15 @@ public class Main implements Initializable {
     private Parent popContent;
     public static Main ctrl;
 
-    public Register newuser = new Register();
+    public Register user = new Register();
 
 
-    public Register getNewuser() {
-        return newuser;
+    public Register getUser() {
+        return user;
     }
 
-    public void setNewuser(Register newuser) {
-        this.newuser = newuser;
+    public void setUser(Register user) {
+        this.user = user;
     }
 
     @Override
