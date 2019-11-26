@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="644.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.AddMovieController">
    <children>
       <TextField fx:id="name" layoutX="267.0" layoutY="72.0" prefHeight="26.0" prefWidth="354.0" />
-      <Label fx:id="label" layoutX="217.0" layoutY="76.0" text="ชื่อหนัง" />
+      <Label layoutX="217.0" layoutY="76.0" text="ชื่อหนัง" />
       <Label layoutX="198.0" layoutY="118.0" text="รายละเอียด" />
       <TextArea fx:id="detail" layoutX="267.0" layoutY="118.0" prefHeight="152.0" prefWidth="373.0" />
       <Button layoutX="267.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleClickAddPhoto" onMouseDragEntered="#handleClickAddPhoto" text="เลือกรูป" />

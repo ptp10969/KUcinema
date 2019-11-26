@@ -1,19 +1,3 @@
-/*
- * Copyright (C) Gleidson Neves da Silveira
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.gn.module.main;
 
 import com.gn.Database.Database;
@@ -121,17 +105,6 @@ public class Main implements Initializable {
     private Parent popContent;
     public static Main ctrl;
 
-<<<<<<< HEAD
-    public Register newuser = new Register();
-
-
-    public Register getNewuser() {
-        return newuser;
-    }
-
-    public void setNewuser(Register newuser) {
-        this.newuser = newuser;
-=======
     public Register user = new Register();
 
 
@@ -141,7 +114,6 @@ public class Main implements Initializable {
 
     public void setUser(Register user) {
         this.user = user;
->>>>>>> 62e19e8f4c5400d8ee4050b2ab1dbe65ae52d188
     }
 
     @Override
@@ -770,7 +742,7 @@ public class Main implements Initializable {
 
     @FXML
     private void openNotification(){
-      if(!pop.isShowing()){
+        if(!pop.isShowing()){
             GNAvatarView avatar1 = new GNAvatarView();
             GNAvatarView avatar2 = new GNAvatarView();
             GNAvatarView avatar3 = new GNAvatarView();
@@ -831,7 +803,7 @@ public class Main implements Initializable {
             pop.show(notifications);
 
         } else {
-              pop.hide();
+            pop.hide();
         }
     }
 }

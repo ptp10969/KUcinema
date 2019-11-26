@@ -1,19 +1,3 @@
-/*
- * Copyright (C) Gleidson Neves da Silveira
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.gn.module.login;
 
 import animatefx.animation.Flash;
@@ -159,7 +143,7 @@ public class login implements Initializable {
 //            lbl_username.setVisible(true);
 //        }
 
-       Register user = login(username.getText(),password.getText());
+        Register user = login(username.getText(),password.getText());
 
         if(user != null) {
             enters(user);
@@ -208,12 +192,7 @@ public class login implements Initializable {
             section.setUserLogged(this.username.getText());
             SectionManager.save(section);
 
-<<<<<<< HEAD
-            Main.ctrl.setNewuser(user);
-            Main.ctrl.newuser.setUsername(user.getUsername());
-=======
             Main.ctrl.setUser(user);
->>>>>>> 62e19e8f4c5400d8ee4050b2ab1dbe65ae52d188
             Main.ctrl.fullname.setText(user.getUsername());
             App.decorator.setContent(ViewManager.getInstance().get("main"));
 
@@ -324,14 +303,14 @@ public class login implements Initializable {
                 @Override
                 public void run() {
                     Platform.runLater(()-> {
-                        // add notification in later
-    //                                    TrayNotification tray = new TrayNotification();
-    //                                    tray.setNotificationType(NotificationType.NOTICE);
-    //                                    tray.setRectangleFill(Color.web(""));
-    //                                    tray.setTitle("Welcome!");
-    //                                    tray.setMessage("Welcome back " + username);
-    //                                    tray.showAndDismiss(Duration.millis(10000));
-                        }
+                                // add notification in later
+                                //                                    TrayNotification tray = new TrayNotification();
+                                //                                    tray.setNotificationType(NotificationType.NOTICE);
+                                //                                    tray.setRectangleFill(Color.web(""));
+                                //                                    tray.setTitle("Welcome!");
+                                //                                    tray.setMessage("Welcome back " + username);
+                                //                                    tray.showAndDismiss(Duration.millis(10000));
+                            }
                     );
                 }
             };

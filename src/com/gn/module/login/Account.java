@@ -1,19 +1,3 @@
-/*
- * Copyright (C) Gleidson Neves da Silveira
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.gn.module.login;
 
 import animatefx.animation.*;
@@ -45,12 +29,9 @@ import java.io.*;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-<<<<<<< HEAD
-=======
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
->>>>>>> 62e19e8f4c5400d8ee4050b2ab1dbe65ae52d188
 import java.util.ResourceBundle;
 
 /**
@@ -143,16 +124,6 @@ public class Account implements Initializable {
         } else {
             lbl_password.setVisible(true);
         }
-<<<<<<< HEAD
-        Register register = new Register();
-        register.addUser(username.getText(),fullname.getText(),email.getText(),password.getText());
-
-
-    }
-
-
-    private void setProperties(){
-=======
 
     }
 
@@ -188,42 +159,41 @@ public class Account implements Initializable {
 
 
     private void setProperties(Register users){
->>>>>>> 62e19e8f4c5400d8ee4050b2ab1dbe65ae52d188
 
-            Section section = new Section(true, username.getText());
-            SectionManager.save(section);
+        Section section = new Section(true, username.getText());
+        SectionManager.save(section);
 
-            User user = new User(username.getText(), fullname.getText(), email.getText(), password.getText());
-            UserManager.save(user);
+        User user = new User(username.getText(), fullname.getText(), email.getText(), password.getText());
+        UserManager.save(user);
 
-            UserDetail detail = App.getUserDetail();
-            detail.setText(user.getFullName());
-            detail.setHeader(user.getUserName());
+        UserDetail detail = App.getUserDetail();
+        detail.setText(user.getFullName());
+        detail.setHeader(user.getUserName());
 
-            App.decorator.addCustom(detail);
-            detail.setProfileAction(event -> {
-                App.getUserDetail().getPopOver().hide();
-                Main.ctrl.title.setText("Profile");
-                Main.ctrl.body.setContent(ViewManager.getInstance().get("profile"));
+        App.decorator.addCustom(detail);
+        detail.setProfileAction(event -> {
+            App.getUserDetail().getPopOver().hide();
+            Main.ctrl.title.setText("Profile");
+            Main.ctrl.body.setContent(ViewManager.getInstance().get("profile"));
 
-            });
+        });
 
-            detail.setSignAction(event -> {
-                    App.getUserDetail().getPopOver().hide();
-                    SectionManager.save(new Section(false, ""));
+        detail.setSignAction(event -> {
+            App.getUserDetail().getPopOver().hide();
+            SectionManager.save(new Section(false, ""));
 
-                    this.password.setText("");
-                    this.email.setText("");
-                    this.fullname.setText("");
-                    this.username.setText("");
+            this.password.setText("");
+            this.email.setText("");
+            this.fullname.setText("");
+            this.username.setText("");
 
-                    App.decorator.setContent(ViewManager.getInstance().get("login"));
+            App.decorator.setContent(ViewManager.getInstance().get("login"));
 
-                    App.decorator.removeCustom(detail);
-            });
-            Main.ctrl.setUser(users);
-            Main.ctrl.fullname.setText(users.getUsername());
-            App.decorator.setContent(ViewManager.getInstance().get("main"));
+            App.decorator.removeCustom(detail);
+        });
+        Main.ctrl.setUser(users);
+        Main.ctrl.fullname.setText(users.getUsername());
+        App.decorator.setContent(ViewManager.getInstance().get("main"));
     }
 
     @FXML
@@ -243,7 +213,7 @@ public class Account implements Initializable {
 
         node.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if(!node.isFocused())
-            node.getParent().setStyle("-icon-color : -dark-gray; -fx-border-color : transparent");
+                node.getParent().setStyle("-icon-color : -dark-gray; -fx-border-color : transparent");
             else node.getParent().setStyle("-icon-color : -success; -fx-border-color : -success");
         });
     }
