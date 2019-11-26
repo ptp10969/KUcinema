@@ -208,8 +208,12 @@ public class login implements Initializable {
             section.setUserLogged(this.username.getText());
             SectionManager.save(section);
 
+<<<<<<< HEAD
             Main.ctrl.setNewuser(user);
             Main.ctrl.newuser.setUsername(user.getUsername());
+=======
+            Main.ctrl.setUser(user);
+>>>>>>> 62e19e8f4c5400d8ee4050b2ab1dbe65ae52d188
             Main.ctrl.fullname.setText(user.getUsername());
             App.decorator.setContent(ViewManager.getInstance().get("main"));
 

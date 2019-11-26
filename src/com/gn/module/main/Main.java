@@ -121,6 +121,7 @@ public class Main implements Initializable {
     private Parent popContent;
     public static Main ctrl;
 
+<<<<<<< HEAD
     public Register newuser = new Register();
 
 
@@ -130,6 +131,17 @@ public class Main implements Initializable {
 
     public void setNewuser(Register newuser) {
         this.newuser = newuser;
+=======
+    public Register user = new Register();
+
+
+    public Register getUser() {
+        return user;
+    }
+
+    public void setUser(Register user) {
+        this.user = user;
+>>>>>>> 62e19e8f4c5400d8ee4050b2ab1dbe65ae52d188
     }
 
     @Override
@@ -641,6 +653,7 @@ public class Main implements Initializable {
     @FXML
     private void addMovie(){
         title.setText("เพิ่มภาพยนตร์");
+        System.out.println(user.getUsername());
         body.setContent(ViewManager.getInstance().get("AddMovie"));
     }
     @FXML
