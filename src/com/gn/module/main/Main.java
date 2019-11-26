@@ -18,12 +18,12 @@ package com.gn.module.main;
 
 import com.gn.Database.Database;
 import com.gn.GNAvatarView;
+import com.gn.global.User;
+import com.gn.global.plugin.UserManager;
 import com.gn.global.plugin.ViewManager;
 import com.gn.global.factory.AlertCell;
-import com.gn.objects.Movie;
-import com.gn.objects.Program;
-import com.gn.objects.Seat;
-import com.gn.objects.ShowTime;
+import com.gn.module.login.login;
+import com.gn.objects.*;
 import com.jfoenix.controls.JFXBadge;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
@@ -90,10 +90,12 @@ public class Main implements Initializable {
     @FXML private JFXBadge notifications;
     @FXML private JFXBadge bg_info;
     @FXML private ToggleGroup group;
+    @FXML public Label fullname ;
 
 
 
     @FXML private RadioButton available;
+
 
     private FilteredList<Button> filteredList = null;
 
@@ -119,6 +121,17 @@ public class Main implements Initializable {
     private Parent popContent;
     public static Main ctrl;
 
+    public Register newuser = new Register();
+
+
+    public Register getNewuser() {
+        return newuser;
+    }
+
+    public void setNewuser(Register newuser) {
+        this.newuser = newuser;
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
         ctrl = this;
@@ -132,7 +145,6 @@ public class Main implements Initializable {
                 status.setText(((RadioButton)newValue).getText());
             }
         });
-
 
 
         populateItems();

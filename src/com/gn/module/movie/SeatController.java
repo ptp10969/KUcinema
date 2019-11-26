@@ -14,6 +14,9 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
+import com.gn.global.util.Alerts;
+
+
 import java.util.ArrayList;
 
 public class SeatController {
@@ -118,11 +121,12 @@ public class SeatController {
         }
     }
 
-    @FXML
+    /*@FXML
     public void acceptButtonOnClick(ActionEvent e){
         for (Seat s : seats){
             if (s.getStatus().equals("selected")){
                 if (s.reserve(Main.ctrl.connection,1)){
+
                     alert.setContentText("จองที่นั่ง " + s.getSeat_name() + " สำเร็จ");
                     alert.setHeaderText("จองที่นั่งสำเร็จ");
                     s.setStatus("you");
@@ -134,7 +138,26 @@ public class SeatController {
                 load();
             }
         }
+    }*/
+    @FXML
+    private void success(){
+        for (Seat s : seats){
+            if (s.getStatus().equals("selected")){
+                if (s.reserve(Main.ctrl.connection,1)){
+
+                    Alerts.success("จองที่นั่งสำเร็จ ", "จองที่นั่ง " + s.getSeat_name() + " สำเร็จ");
+                    s.setStatus("you");
+                } else {
+                    Alerts.success("จองที่นั่งไม่สำเร็จ ", "จองที่นั่ง " + s.getSeat_name() + " ไม่สำเร็จ กรุณา Refresh ที่นั่ง");
+                }
+
+                load();
+            }
+        }
+
     }
+
+
 
     @FXML
     public void refreshButtonOnClick(ActionEvent e){

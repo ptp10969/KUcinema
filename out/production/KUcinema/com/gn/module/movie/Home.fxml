@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="1120.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.HomeController">
+    <children>
+        <TabPane>
+            <tabs>
+                <Tab closable="false" text="กำลังเข้าฉาย">
+                    <content>
+                        <Pane fx:id="container" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="program_list" layoutY="-2.0" prefHeight="1078.0" prefWidth="1201.0">
+                          <columns>
+                            <TableColumn fx:id="program_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
+                            <TableColumn fx:id="program_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />
+                              <TableColumn fx:id="program_column_detail" prefWidth="366.0" style="-fx-wrap-text: true;" text="เรื่องย่อ" />
+                              <TableColumn fx:id="program_column_button" minWidth="0.0" prefWidth="97.0" style="-fx-alignment: center;" />
+                              <TableColumn fx:id="program_column_button_showtime" minWidth="0.0" prefWidth="87.0" style="-fx-alignment: center;" />
+                          </columns>
+                        </TableView>
+                     </children>
+                        </Pane>
+                    </content></Tab>
+                <Tab closable="false" text="เร็วๆนี้">
+               <content>
+                  <TableView fx:id="movie_list" prefHeight="1075.0" prefWidth="1200.0">
+                     <columns>
+                        <TableColumn fx:id="movie_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
+                        <TableColumn fx:id="movie_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />
+                        <TableColumn fx:id="movie_column_detail" prefWidth="424.0" style="-fx-wrap-text: true;" text="เรื่องย่อ" />
+                        <TableColumn fx:id="movie_column_button" minWidth="0.0" prefWidth="98.0" style="-fx-alignment: center;" />
+                     </columns>
+                  </TableView>
+               </content></Tab>
+            <Tab closable="false" text="ค้นหาหนัง" />
+            </tabs>
+        </TabPane>
+    </children>
+    <stylesheets>
+        <URL value="@../../theme/css/material-color.css" />
+        <URL value="@../../theme/css/skeleton.css" />
+        <URL value="@../../theme/css/light.css" />
+        <URL value="@../../theme/css/bootstrap.css" />
+        <URL value="@../../theme/css/simple-green.css" />
+        <URL value="@../../theme/css/shape.css" />
+        <URL value="@../../theme/css/typographic.css" />
+        <URL value="@../../theme/css/helpers.css" />
+        <URL value="@../../theme/css/master.css" />
+    </stylesheets>
+</StackPane>

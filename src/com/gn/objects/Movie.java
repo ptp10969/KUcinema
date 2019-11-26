@@ -165,4 +165,27 @@ public class Movie {
     public String getYoutube_link() {
         return youtube_link;
     }
+    public int checkMovie(String nameMovie){
+        String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=TestDB;integratedSecurity=true;";
+        // Define the data you will be returning, in this case, a List of Strings for the ComboBox
+        int count =0;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = Database.connect("localhost/se_db", "root", "");
+            String query = "SELECT COUNT(*)  FROM movies where name = '" +nameMovie+ "'";
+            Statement stmt = connection.createStatement();
+            //Query to get the number of rows in a table
+            //Executing the query
+            ResultSet rs = stmt.executeQuery(query);
+            //Retrieving the result
+            rs.next();
+            count = rs.getInt(1);
+
+
+        } catch (ClassNotFoundException | SQLException ex) {
+
+
+        }
+        return  count;
+    }
 }

@@ -16,11 +16,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+
 
 public class HomeController {
     @FXML private Pane container;
@@ -35,6 +38,8 @@ public class HomeController {
     @FXML TableColumn<Program, Button> program_column_button;
     @FXML TableColumn<Program, Button> program_column_button_showtime;
     @FXML TableColumn<Program, ImageView> program_column_picture;
+
+
     public static HomeController HomeCtr;
     public HashMap<String,Program> programs;
     public ArrayList<String> keys;
@@ -130,4 +135,5 @@ public class HomeController {
         program_list.getItems().clear();
         program_list.getItems().addAll(getProgram());
     }
+
 }

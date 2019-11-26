@@ -1,10 +1,15 @@
 package com.gn.module.movie;
-import com.gn.Main;
+import com.gn.Database.Database;
 import com.gn.global.plugin.ViewManager;
+import com.gn.global.util.Alerts;
+import com.gn.module.main.Main;
 import com.gn.objects.Movie;
+import com.gn.objects.Seat;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -16,8 +21,9 @@ import javafx.scene.image.Image ;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Blob;
-import java.sql.SQLException;
+import java.sql.*;
+
+import static sun.nio.ch.IOUtil.load;
 
 public class AddMovieController {
 
@@ -36,6 +42,16 @@ public class AddMovieController {
     Movie movie = null;
     @FXML
     Label label;
+    public Alert alert;
+    public void initialize(){
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                alert = new Alert(Alert.AlertType.INFORMATION);
+            }
+        });
+    }
 
 
     @FXML public void handleClickAddPhoto(ActionEvent e) {
@@ -53,15 +69,44 @@ public class AddMovieController {
 
     }
     @FXML public void handleClickAddMovie(ActionEvent e) throws IOException, SQLException {
-        byte[] byteArray = new byte[(int) file.length()];
-        FileInputStream inputStream =  new FileInputStream(file);
-        inputStream.read(byteArray);
-        Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
-        movie.create(file,name.getText(),detail.getText(),link.getText());
+        if (name.getText() == null || detail.getText() == null || link.getText() == null || myImageView.getImage() == null) {
+            Alerts.error("เพิ่มหนังไม่สำเร็จ", "กรุณากรอกข้อมูลให้ครบ");
+        } else {
+            String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=TestDB;integratedSecurity=true;";
+            // Define the data you will be returning, in this case, a List of Strings for the ComboBox
+            int count = 0;
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection connection = Database.connect("localhost/se_db", "root", "");
+                String query = "SELECT COUNT(*)  FROM movies where name = '" + name.getText() + "'";
+                Statement stmt = connection.createStatement();
+                //Query to get the number of rows in a table
+                //Executing the query
+                ResultSet rs = stmt.executeQuery(query);
+                //Retrieving the result
+                rs.next();
+                count = rs.getInt(1);
 
 
+            } catch (ClassNotFoundException | SQLException ex) {
+                System.out.println("fail");
 
+            }
+            if (count == 0) {
+                byte[] byteArray = new byte[(int) file.length()];
+                FileInputStream inputStream = new FileInputStream(file);
+                inputStream.read(byteArray);
+                Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
+                movie.create(file, name.getText(), detail.getText(), link.getText());
+                Alerts.success("เพิ่มหนังสำเร็จ ", "เพิ่มหนัง " + name.getText() + " สำเร็จ");
+            } else {
+                Alerts.error("เพิ่มหนังไม่สำเร็จ", "ขออภัยหนังชื่อ" + name.getText() + " มีในระบบแล้ว");
+            }
+            load();
+
+        }
     }
+
 
     }
 

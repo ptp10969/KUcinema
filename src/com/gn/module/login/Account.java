@@ -18,6 +18,7 @@ package com.gn.module.login;
 
 import animatefx.animation.*;
 import com.gn.App;
+import com.gn.Database.Database;
 import com.gn.GNAvatarView;
 import com.gn.decorator.GNDecorator;
 import com.gn.global.plugin.ViewManager;
@@ -42,6 +43,8 @@ import javafx.util.Duration;
 
 import java.io.*;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 
 /**
@@ -129,13 +132,12 @@ public class Account implements Initializable {
         } else {
             lbl_password.setVisible(true);
         }
-
         Register register = new Register();
         register.addUser(username.getText(),fullname.getText(),email.getText(),password.getText());
 
 
-
     }
+
 
     private void setProperties(){
 
