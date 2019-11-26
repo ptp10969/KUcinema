@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `programs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table se_db.programs: ~1 rows (approximately)
+-- Dumping data for table se_db.programs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `programs` DISABLE KEYS */;
 REPLACE INTO `programs` (`id`, `movie_id`, `date`) VALUES
 	(4, 7, '2019-11-16');
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `showtimes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table se_db.showtimes: ~1 rows (approximately)
+-- Dumping data for table se_db.showtimes: ~0 rows (approximately)
 /*!40000 ALTER TABLE `showtimes` DISABLE KEYS */;
 REPLACE INTO `showtimes` (`id`, `time`, `program_id`) VALUES
 	(3, '11.15', 4);
@@ -128,16 +128,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `roles` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'USER',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table se_db.users: ~5 rows (approximately)
+-- Dumping data for table se_db.users: ~7 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 REPLACE INTO `users` (`id`, `username`, `name`, `email`, `password`, `roles`) VALUES
 	(1, '', '', '', '', 'USER'),
 	(2, 'folkfolkfolk', 'Pattarapon', 'paoapsda@fdsddsfsdf.com', '123456789', 'USER'),
 	(3, 'mekm', 'Mekmek', 'mekmek@mek.com', '123456789', 'USER'),
 	(4, 'mmoklkl', 'Lsdk', 'mapa@gmail.com', '1233456789', 'USER'),
-	(5, 'testtest', 'Mekzaza', 'mek@mek.com', '12345678', 'USER');
+	(5, 'testtest', 'Mekzaza', 'mek@mek.com', '12345678', 'USER'),
+	(6, 'napatsorn', 'Napatsorn Juop', 'napat.p@ku.th', '123456789', 'USER'),
+	(7, 'napatsorn123', 'Napatsorn Juop', 'napat.p@ku.th', '123456789', 'USER');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
