@@ -146,7 +146,7 @@ public class App extends Application {
 //        decorator.setIcon(null);
         decorator.addButton(ButtonType.FULL_EFFECT);
         decorator.initTheme(GNDecorator.Theme.DEFAULT);
-//        decorator.fullBody();
+  //      decorator.fullBody();
 
 //        String log = logged();
         String log = "login";
