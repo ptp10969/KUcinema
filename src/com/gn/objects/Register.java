@@ -4,76 +4,90 @@ import com.gn.Database.Database;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Register {
-    private String id;
-    private String userId ;
+    private String user_Id;
+    private String username ;
     private String name;
     private String email;
     private String password;;
     private String roles;
 
 
-    public ArrayList<String> login(String userId, String password) throws Exception {
-        ArrayList<String> str = new ArrayList<>();
+//    public ArrayList<String> login(String username, String password) throws Exception {
+//        ArrayList<String> str = new ArrayList<>();
+//        try {
+//            Connection connection = Database.connect("localhost/se_db", "root", "");
+//            String query = "SELECT * FROM users WHERE username = '" +username+"' AND password = '" +password+"'";
+//
+//            Statement psmt = connection.createStatement();
+//            ResultSet rs = psmt.executeQuery(query);
+//
+//            str.add(rs.getString("username"));
+//            str.add(rs.getString("password"));
+//            str.add(rs.getString("name"));
+//            connection.close();
+//
+//        } catch (Exception ex){
+//            ex.printStackTrace();
+//        }
+//
+//        if(str != null)
+//            return str;
+//        else return null;
+//    }
+
+    public void addUser(String username, String name, String email, String password) throws Exception {
         try {
             Connection connection = Database.connect("localhost/se_db", "root", "");
-            String query = "SELECT * FROM users WHERE user_id = '" +userId+"' AND password = '" +password+"'";
+            String query = "INSERT INTO users(username,name,email,password) VALUES ('" + username + "', '" + name +
+                    "', '"+email+"','"+password+"') ";
+            // เก็บไว้ใช้ต่อ
+//            Statement statement = connection.createStatement();
+//            ResultSet resultSet = statement.executeQuery(query);
 
-            Statement psmt = connection.createStatement();
-            ResultSet rs = psmt.executeQuery(query);
-
-            str.add(rs.getString("user_id"));
-            str.add(rs.getString("name"));
+            // ไม่ต้องเก็บ
+            PreparedStatement psmt = connection.prepareStatement(query);
+            psmt.execute();
 
             connection.close();
-
         } catch (Exception ex){
             ex.printStackTrace();
         }
-
-        if(str != null)
-            return str;
-        else return null;
     }
 
-    public Register getUser(String userId) throws Exception{
-        try {
-            Connection connection = Database.connect("localhost/se_db", "root", "");
-            String query = "SELECT * FROM users WHERE user_id = '" +userId+"'";
-
-            Statement psmt = connection.createStatement();
-            ResultSet rs = psmt.executeQuery(query);
-
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
-
-        return null;
+    public Register getUser(ArrayList str) throws Exception{
+        Register user = new Register();
+        user.setUser_Id((String) str.get(0));
+        user.setUsername((String) str.get(1));
+        user.setName((String) str.get(2));
+        user.setEmail((String) str.get(3));
+        user.setPassword((String) str.get(4));
+        user.setRoles((String) str.get(5));
+        System.out.println(user.getUsername());
+        return user;
     }
 
 
-    public String getUserId() {
-        return userId;
+    public String getUser_Id() {
+        return user_Id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser_Id(String user_Id) {
+        this.user_Id = user_Id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getName() {
         return name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getRoles() {

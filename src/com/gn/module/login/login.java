@@ -41,6 +41,7 @@ import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -157,18 +158,107 @@ public class login implements Initializable {
 //            lbl_password.setVisible(true);
 //            lbl_username.setVisible(true);
 //        }
-        Register register = new Register();
-        ArrayList<String> str = register.login(username.getText(),password.getText());
 
+       Register user = login(username.getText(),password.getText());
 
-        if(str != null) {
-            enter();
+        if(user != null) {
+            enters(user);
         }
         else {
             lbl_password.setVisible(true);
             lbl_username.setVisible(true);
         }
     }
+
+    public Register login(String username, String password) throws Exception {
+        ArrayList<String> str = new ArrayList<>();
+        Register user = new Register();
+        try {
+            Connection connection = Database.connect("localhost/se_db", "root", "");
+            String query = "SELECT * FROM users WHERE username = '" +username+"' AND password = '" +password+"'";
+
+            Statement psmt = connection.createStatement();
+            ResultSet rs = psmt.executeQuery(query);
+
+            while(rs.next()) {
+                user.setUser_Id(rs.getString("id"));
+                user.setUsername(rs.getString("username"));
+                user.setName(rs.getString("name"));
+                user.setEmail(rs.getString("email"));
+                user.setPassword(rs.getString("password"));
+                user.setRoles(rs.getString("roles"));
+            }
+            connection.close();
+
+
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+        if(user != null)
+            return user;
+        else return null;
+    }
+
+
+    public void enters(Register user) {
+        if(user.getUsername().equals(this.username.getText()) && user.getPassword().equals(this.password.getText())){
+            Section section = new Section();
+            section.setLogged(true);
+            section.setUserLogged(this.username.getText());
+            SectionManager.save(section);
+
+            Main.ctrl.setNewuser(user);
+            Main.ctrl.newuser.setUsername(user.getUsername());
+            Main.ctrl.fullname.setText(user.getUsername());
+            App.decorator.setContent(ViewManager.getInstance().get("main"));
+
+            UserDetail detail = App.getUserDetail();
+            detail.setText(user.getName());
+            detail.setHeader(user.getUsername());
+
+            App.decorator.addCustom(App.getUserDetail());
+
+            App.getUserDetail().setProfileAction(event -> {
+                App.getUserDetail().getPopOver().hide();
+                Main.ctrl.title.setText("Profile");
+                Main.ctrl.body.setContent(ViewManager.getInstance().get("profile"));
+            });
+
+            App.getUserDetail().setSignAction(event -> {
+                App.getUserDetail().getPopOver().hide();
+                App.decorator.setContent(ViewManager.getInstance().get("login"));
+                this.username.setText("");
+                this.password.setText("");
+                if(Main.popConfig.isShowing()) Main.popConfig.hide();
+                if(Main.popup.isShowing()) Main.popup.hide();
+                App.decorator.removeCustom(App.getUserDetail());
+            });
+
+            TimerTask timerTask = new TimerTask() {
+                @Override
+                public void run() {
+                    Platform.runLater(()-> {
+                                // add notification in later
+                                //                                    TrayNotification tray = new TrayNotification();
+                                //                                    tray.setNotificationType(NotificationType.NOTICE);
+                                //                                    tray.setRectangleFill(Color.web(""));
+                                //                                    tray.setTitle("Welcome!");
+                                //                                    tray.setMessage("Welcome back " + username);
+                                //                                    tray.showAndDismiss(Duration.millis(10000));
+                            }
+                    );
+                }
+            };
+
+            Timer timer = new Timer();
+            timer.schedule(timerTask, 300);
+
+        } else {
+            lbl_error.setVisible(true);
+        }
+    }
+
 //    public ArrayList<String> login(String userId, String password) throws Exception {
 //        ArrayList<String> str = new ArrayList<>();
 //        try {

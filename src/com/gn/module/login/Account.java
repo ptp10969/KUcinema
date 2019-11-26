@@ -132,29 +132,12 @@ public class Account implements Initializable {
         } else {
             lbl_password.setVisible(true);
         }
-
-        addUser(username.getText(),fullname.getText(),email.getText(),password.getText());
+        Register register = new Register();
+        register.addUser(username.getText(),fullname.getText(),email.getText(),password.getText());
 
 
     }
-    public void addUser(String userId, String name, String email, String password) throws Exception {
-        try {
-            Connection connection = Database.connect("localhost/se_db", "root", "");
-            String query = "INSERT INTO users(user_id,name,email,password) VALUES ('" + userId + "', '" + name +
-                    "', '"+email+"','"+password+"') ";
-            // เก็บไว้ใช้ต่อ
-//            Statement statement = connection.createStatement();
-//            ResultSet resultSet = statement.executeQuery(query);
 
-            // ไม่ต้องเก็บ
-            PreparedStatement psmt = connection.prepareStatement(query);
-            psmt.execute();
-
-            connection.close();
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
-    }
 
     private void setProperties(){
 

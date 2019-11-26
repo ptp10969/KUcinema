@@ -22,10 +22,8 @@ import com.gn.global.User;
 import com.gn.global.plugin.UserManager;
 import com.gn.global.plugin.ViewManager;
 import com.gn.global.factory.AlertCell;
-import com.gn.objects.Movie;
-import com.gn.objects.Program;
-import com.gn.objects.Seat;
-import com.gn.objects.ShowTime;
+import com.gn.module.login.login;
+import com.gn.objects.*;
 import com.jfoenix.controls.JFXBadge;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
@@ -92,7 +90,7 @@ public class Main implements Initializable {
     @FXML private JFXBadge notifications;
     @FXML private JFXBadge bg_info;
     @FXML private ToggleGroup group;
-    @FXML private Label fullname ;
+    @FXML public Label fullname ;
 
 
 
@@ -123,6 +121,16 @@ public class Main implements Initializable {
     private Parent popContent;
     public static Main ctrl;
 
+    public Register newuser = new Register();
+
+
+    public Register getNewuser() {
+        return newuser;
+    }
+
+    public void setNewuser(Register newuser) {
+        this.newuser = newuser;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
