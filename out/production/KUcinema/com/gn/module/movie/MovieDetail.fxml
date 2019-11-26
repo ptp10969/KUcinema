@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<StackPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.MovieDetailController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="1165.0" spacing="10.0">
+            <children>
+                <VBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="976.0">
+                    <children>
+                        <Label fx:id="title" prefHeight="7.0" prefWidth="349.0" text="Lookism คนจะหล่อ...ขอเกิดหน่อย">
+                            <styleClass>
+                                <String fx:value="h3" />
+                                <String fx:value="title" />
+                            </styleClass>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefWidth="952.0" spacing="20.0" styleClass="box-light" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="345.0" prefWidth="940.0" spacing="10.0">
+                            <children>
+                                <ImageView fx:id="img" fitHeight="391.0" fitWidth="279.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../media/movies/3.jpg" />
+                                    </image>
+                                </ImageView>
+                                <VBox fx:id="vbox" prefHeight="393.0" prefWidth="800.0">
+                           <children>
+                              <Pane fx:id="pane" prefHeight="392.0" prefWidth="651.0" />
+                           </children></VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label prefHeight="38.0" prefWidth="195.0" text="เรื่องย่อ">
+                            <styleClass>
+                                <String fx:value="h3" />
+                                <String fx:value="title" />
+                            </styleClass>
+                        </Label>
+                        <TextFlow prefHeight="54.0" prefWidth="952.0">
+                            <children>
+                                <Text fx:id="detail" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="&quot;คนจะหล่อ...ขอเกิดหน่อย&quot; บอกเล่าเรื่องราวของเด็กชายที่น่าเกลียดที่สุดของโรงเรียนเหวินซ่วยผู้กล้าที่จะถ่ายโอนหลังจากถูกรังแกในโรงเรียนดั้งเดิม แต่มีศพที่แตกต่างกันสองแห่งในชั่วข้ามคืน! หนึ่งคือตัวตนเดิมที่น่าเกลียด แต่พระเจ้าตัวผู้ที่สมบูรณ์แบบที่กลายเป็นนาฬิกาที่มีสีสันไต่ว Shuai พบว่าความคิดของเขาสามารถสลับไปมาระหว่างสองร่างได้เมื่อร่างหนึ่งตื่นขึ้นอีกร่างหนึ่งจะเข้าสู่ สภาวะการนอนหลับ ... ความลับของทั้งสองร่างทำให้ชีวิตดั้งเดิมของ Tian Shuai เปลี่ยนแปลงไปอย่างมากเขาไม่เคยได้รับการต้อนรับเริ่มชีวิตที่แตกต่างอย่างสิ้นเชิงและรู้สึกถึงความงามและความสะดวกสบายของชีวิต &quot;ปิรามิด&quot; ในขณะเดียวกันร่างกายที่หล่อเหลานี้ก็ซ่อนความลับอย่างใหญ่หลวงและค่อยๆโผล่ขึ้นมาจากน้ำครูกริชตัวแรกที่หล่อเหลาตื่นขึ้นมาและชั้นของความลึกลับค่อยๆคลี่คลาย" wrappingWidth="1086.443359375">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </TextFlow>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="30.0" right="30.0" top="100.0" />
+            </padding>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@../../theme/css/material-color.css" />
+        <URL value="@../../theme/css/skeleton.css" />
+        <URL value="@../../theme/css/light.css" />
+        <URL value="@../../theme/css/bootstrap.css" />
+        <URL value="@../../theme/css/simple-green.css" />
+        <URL value="@../../theme/css/shape.css" />
+        <URL value="@../../theme/css/typographic.css" />
+        <URL value="@../../theme/css/helpers.css" />
+        <URL value="@../../theme/css/master.css" />
+    </stylesheets>
+</StackPane>
