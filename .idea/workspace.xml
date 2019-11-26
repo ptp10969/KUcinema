@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a404cc20-d5f8-4b47-8e5d-d50de9c171ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseSQL/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseSQL/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseSQL/new.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseSQL/new.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/picture.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/global/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/global/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/global/util/Alerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/global/util/Alerts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/loader/loader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/loader/loader.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/login/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/login/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/login/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/login/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/main/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/main/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/AddMovie.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/AddMovie.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/AddProgram.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/AddProgram.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/Seat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/Seat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/SeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/SeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/profile/profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/profile/profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/objects/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/objects/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/objects/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/objects/Register.java" afterDir="false" />
-    </list>
+    <list default="true" id="a404cc20-d5f8-4b47-8e5d-d50de9c171ab" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+            <state relative-caret-position="374">
+              <caret line="71" column="91" selection-start-line="71" selection-start-column="91" selection-end-line="71" selection-end-column="91" />
               <folding>
                 <element signature="e#1191#1192#0" expanded="true" />
                 <element signature="e#1269#1270#0" expanded="true" />
@@ -211,7 +186,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574781208920" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574781213527" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -439,8 +414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+        <state relative-caret-position="374">
+          <caret line="71" column="91" selection-start-line="71" selection-start-column="91" selection-end-line="71" selection-end-column="91" />
           <folding>
             <element signature="e#1191#1192#0" expanded="true" />
             <element signature="e#1269#1270#0" expanded="true" />
