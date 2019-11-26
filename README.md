@@ -13,10 +13,15 @@
 และสมาชิกของระบบ สามารถตรวจสอบที่นั่ง ตรวจสอบภาพยนตร์ที่จะเข้าฉาย หรือกำลังทำการฉายอยู่ และสามารถจองที่นั่งได้ ส่วน ADMIN ของระบบสามารถทำการเพิ่มหนังได้ สามารถทำการเพิ่มรอบหนังได้ 
 
 ## ขั้นตอนการติดตั้งโปรเจค
-1. clone โปรเจคมาจาก github ลิ้งค์ 
-2. เปิดโปรแกรม InteliJ
-3. Run คำสั่ง composer install
-4. Run คำสั่ง composer dump-autoload
-5. Run คำสั่ง cp .env.example .env
+1. clone โปรเจคมาจาก github ลิ้งค์ https://github.com/folkdogfk/KUcinema.git
+2. เมื่อ clone เสร็จเรียบร้อยให้ เปิดโปรแกรม Laragon 
+3. คลิ๊กขวาที่ MySQL และกด Start MySQL
+4. ต่อไป คลิ๊กขวาที่ MySQL อีกครั้ง และกด HeidiSQL
+5. จะแสดงหน้าของ Database ของ Laragon ขึ้นมา
+6. Open SQL file ขึ้นมาจากโปรเจคที่ clone มา Folder DatabaseSQL และ เลือก db.sql 
+7. เปิดโปรแกรม InteliJ ขึ้นมา
+8. เลือก Import Project จาก KUcinema 
+9. กด Run 
+10. ระบบ KUcinema พร้อมใช้งาน
 
 
