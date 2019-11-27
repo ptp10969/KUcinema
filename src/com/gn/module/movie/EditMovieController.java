@@ -88,7 +88,7 @@ public class EditMovieController {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             String query = "select * from movies";
             PreparedStatement statement = connection.prepareStatement(query);
 
@@ -134,7 +134,7 @@ public class EditMovieController {
           Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
           try {
               Class.forName("com.mysql.cj.jdbc.Driver");
-              Connection connection = Database.connect("localhost/se_db", "root", "");
+              Connection connection = Database.getConnection();
 
               PreparedStatement statement = connection.prepareStatement("UPDATE movies SET detail= ?,link=? , picture=? Where name = ?");
               statement.setString(1, detail.getText());
@@ -165,7 +165,7 @@ public class EditMovieController {
       else{
           try {
               Class.forName("com.mysql.cj.jdbc.Driver");
-              Connection connection = Database.connect("localhost/se_db", "root", "");
+              Connection connection = Database.getConnection();
               PreparedStatement statement = connection.prepareStatement("UPDATE movies SET detail= ?,link=? Where name = ?");
               statement.setString(1, detail.getText());
               statement.setString(2, link.getText());
@@ -206,7 +206,7 @@ public class EditMovieController {
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection connection = Database.connect("localhost/se_db", "root", "");
+                Connection connection = Database.getConnection();
                 String query = "Select * from movies where name = '"+comboBoxx.getValue()+"'";
                 Statement stmt = connection.createStatement();
                 //Query to get the number of rows in a table
@@ -245,7 +245,7 @@ public class EditMovieController {
     public void handleClickDeleteMovie(ActionEvent event) throws IOException, SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             PreparedStatement statement = connection.prepareStatement("DELETE FROM movies WHERE id=? ");
             statement.setInt(1,id);
             statement.executeUpdate();
