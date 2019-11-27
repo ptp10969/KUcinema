@@ -49,7 +49,7 @@ public class App extends Application {
 
         float total = 43; // the difference represents the views not loaded
         increment = 100f / total;
-        
+
 
 
         load("main",     "main");
