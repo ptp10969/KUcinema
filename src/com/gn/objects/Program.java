@@ -35,7 +35,6 @@ public class Program {
     public static Program create( Movie movie , Date date){
         Program program = null;
         Connection connection = Database.connect("localhost/se_db", "root", "");
-
         try {
             String sql = "INSERT INTO programs(movie_id,date)"
                     + "VALUES(?,?)";

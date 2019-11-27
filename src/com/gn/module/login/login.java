@@ -188,7 +188,7 @@ public class login implements Initializable {
     public void enters(Register user) {
         if(user.getUsername().equals(this.username.getText()) && user.getPassword().equals(this.password.getText())){
             Section section = new Section();
-            section.setLogged(true);
+            section.setLogged(false);
             section.setUserLogged(this.username.getText());
             SectionManager.save(section);
 
@@ -271,7 +271,7 @@ public class login implements Initializable {
 
         if(user.getUserName().equals(this.username.getText()) && user.getPassword().equals(this.password.getText())){
             Section section = new Section();
-            section.setLogged(true);
+            section.setLogged(false);
             section.setUserLogged(this.username.getText());
             SectionManager.save(section);
 

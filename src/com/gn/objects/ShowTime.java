@@ -1,9 +1,6 @@
 package com.gn.objects;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class ShowTime {
@@ -19,15 +16,16 @@ public class ShowTime {
         this.seats = seats;
     }
 
-    public static ShowTime createShowTime(Connection connection, String time , int program_id){
+    public static ShowTime createShowTime(Connection connection, String time , int program_id , Date date){
         ShowTime show_time = null ;
         try {
-            String sql = "INSERT INTO showtimes(time,program_id)"
-                    + "VALUES(?,?)";
+            String sql = "INSERT INTO showtimes(time,program_id,date)"
+                    + "VALUES(?,?,?)";
             PreparedStatement pstmt = connection.prepareStatement(sql,
                     Statement.RETURN_GENERATED_KEYS);
             pstmt.setString(1, time);
             pstmt.setInt(2, program_id);
+            pstmt.setDate(3,date);
             pstmt.executeUpdate();
             String query = "Select * from showtimes order by id desc";
             Statement statement = connection.createStatement();
@@ -35,7 +33,9 @@ public class ShowTime {
             resultSet.first();
             int id = resultSet.getInt(1);
             show_time = new ShowTime(id,time,program_id,Seat.createSeats(connection,id));
-        } catch (Exception ex){}
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
         return show_time;
     }
 

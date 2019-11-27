@@ -68,7 +68,7 @@ public class SeatController {
                                            }
                                        }
                 );
-            } else if (seat.getReserve_by() == 1 || seat.getStatus().equals("you")){
+            } else if (seat.getReserve_by() == Integer.parseInt(Main.ctrl.user.getUser_Id()) || seat.getStatus().equals("you")){
                 temp.setImage(new Image("com/gn/module/media/chair/c7.png"));
             } else {
                 temp.setImage(new Image("com/gn/module/media/chair/c3.png"));
@@ -106,7 +106,7 @@ public class SeatController {
                                            }
                                        }
                 );
-            } else if (seat.getReserve_by() == 1 || seat.getStatus().equals("you")){
+            } else if (seat.getReserve_by() == Integer.parseInt(Main.ctrl.user.getUser_Id()) || seat.getStatus().equals("you")){
                 temp.setImage(new Image("com/gn/module/media/chair/c8.png"));
             } else {
                 temp.setImage(new Image("com/gn/module/media/chair/c6.png"));
@@ -143,7 +143,7 @@ public class SeatController {
     private void success(){
         for (Seat s : seats){
             if (s.getStatus().equals("selected")){
-                if (s.reserve(Main.ctrl.connection,1)){
+                if (s.reserve(Main.ctrl.connection,Integer.parseInt(Main.ctrl.user.getUser_Id()))){
 
                     Alerts.success("จองที่นั่งสำเร็จ ", "จองที่นั่ง " + s.getSeat_name() + " สำเร็จ");
                     s.setStatus("you");

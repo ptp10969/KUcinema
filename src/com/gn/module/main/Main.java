@@ -114,6 +114,7 @@ public class Main implements Initializable {
 
     public void setUser(Register user) {
         this.user = user;
+        System.out.println(user.getUsername());
     }
 
     @Override
@@ -805,5 +806,9 @@ public class Main implements Initializable {
         } else {
             pop.hide();
         }
+    }
+
+    public void setUser(User  u){
+        System.out.println(user.getUsername());
     }
 }
