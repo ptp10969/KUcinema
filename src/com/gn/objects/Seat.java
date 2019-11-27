@@ -73,12 +73,12 @@ public class Seat {
         return reserve_by;
     }
 
-    public static ArrayList<Seat> readSeat(Connection connection , int showtime_id){
+    public static ArrayList<Seat> readSeat(Connection connection , int showtime_id) throws Exception{
         ArrayList<Seat> seats = new ArrayList<>();
-        try {
-            String query = "Select * from seats where showtime_id = " + showtime_id;
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
+            String query = "Select * from seats where showtime_id = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1,showtime_id);
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt(1);
                 String name = resultSet.getString(2);
@@ -87,10 +87,6 @@ public class Seat {
                 int seat_showtime_id = resultSet.getInt(5);
                 seats.add(new Seat(id,name,reserve_by,price,seat_showtime_id));
             }
-        } catch (Exception ex){
-            System.out.println("read seat Error");
-            ex.printStackTrace();
-        }
         return seats;
     }
 

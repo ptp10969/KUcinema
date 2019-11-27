@@ -141,7 +141,7 @@ public class Movie {
         inputStream.read(byteArray);
         Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
         try {
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             String sql = "INSERT INTO movies(name,detail,picture,link)"
                     + "VALUES(?,?,?,?)";
             PreparedStatement pstmt = connection.prepareStatement(sql,
@@ -171,7 +171,7 @@ public class Movie {
         int count =0;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             String query = "SELECT COUNT(*)  FROM movies where name = '" +nameMovie+ "'";
             Statement stmt = connection.createStatement();
             //Query to get the number of rows in a table

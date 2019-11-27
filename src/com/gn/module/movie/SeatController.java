@@ -161,7 +161,9 @@ public class SeatController {
 
     @FXML
     public void refreshButtonOnClick(ActionEvent e){
-        seats = Seat.readSeat(Main.ctrl.connection,st_id);
+        try {
+            seats = Seat.readSeat(Main.ctrl.connection,st_id);
+        } catch (Exception ex){ }
         load();
     }
 }

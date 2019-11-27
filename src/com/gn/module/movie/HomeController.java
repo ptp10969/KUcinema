@@ -1,5 +1,6 @@
 package com.gn.module.movie;
 
+import com.gn.Database.Database;
 import com.gn.global.plugin.ViewManager;
 import com.gn.module.main.Main;
 import com.gn.objects.Movie;
@@ -102,22 +103,30 @@ public class HomeController {
 
     @FXML public void seat(int showtime_id){
         SeatController.sc.st_id = showtime_id;
-        SeatController.sc.seats = Seat.readSeat(Main.ctrl.connection,showtime_id);
+        try {
+            SeatController.sc.seats = Seat.readSeat(Database.getConnection(),showtime_id);
+        } catch (Exception ex){
+            System.out.println("read Error");
+        }
         SeatController.sc.load();
         Main.ctrl.body.setContent(ViewManager.getInstance().get("Seat"));
     }
 
     public void addMovie(){
-        ArrayList<String> movie_in_program = new ArrayList<>();
+        /*ArrayList<String> movie_in_program = new ArrayList<>();
         for (String k : keys){
             Program p = programs.get(k);
             movie_in_program.add(Integer.toString(p.getMovieId()));
         }
         for (String k : Main.ctrl.keys){
             if (!movie_in_program.contains(k)){
-                Movie m = Main.ctrl.movies.get(k);
+                Movie m = Movie.getMoviesData(Database.getConnection()).get(k);
                 movie_list.getItems().add(m);
             }
+        }*/
+        HashMap<String,Movie> movieHashMap = Movie.getMoviesData(Database.getConnection());
+        for (String k : Movie.getMovieKey(Database.getConnection())){
+            movie_list.getItems().add(movieHashMap.get(k));
         }
     }
 
@@ -130,6 +139,18 @@ public class HomeController {
     }
 
     public void refresh(){
+        programs = Program.readProgram(Database.getConnection(),Movie.getMoviesData(Database.getConnection()));
+        keys = Program.getProgramsKey(Database.getConnection());
+        for (String k : Main.ctrl.keys){
+            Movie m = Movie.getMoviesData(Database.getConnection()).get(k);
+            m.getButton().setOnAction(e ->
+                    detail(Integer.toString(m.getId())));
+        }
+        for (String k : keys){
+            Program p = programs.get(k);
+            p.getButton().setOnAction(e ->
+                    showTime(Integer.toString(p.getId())));
+        }
         movie_list.getItems().clear();
         addMovie();
         program_list.getItems().clear();

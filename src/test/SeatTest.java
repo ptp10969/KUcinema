@@ -16,7 +16,7 @@ public class SeatTest {
     @Test
     public void createSeatsAndReadSeats() {
         try {
-            Connection connection = Database.connect("localhost/se_db","root","");
+            Connection connection = Database.getConnection();
             ArrayList<Seat> seats = Seat.createSeats(connection,0);
             ArrayList<Seat> seats_read = Seat.readSeat(connection,0);
             for (int i = 0 ; i < seats_read.size() ; i++){

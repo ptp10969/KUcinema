@@ -40,7 +40,7 @@ public class Register {
 
     public void addUser(String username, String name, String email, String password) throws Exception {
         try {
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             String query = "INSERT INTO users(username,name,email,password) VALUES ('" + username + "', '" + name +
                     "', '"+email+"','"+password+"') ";
             // เก็บไว้ใช้ต่อ

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,15 +9,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane prefHeight="1120.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.HomeController">
+<StackPane prefHeight="1120.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.HomeController">
     <children>
         <TabPane>
             <tabs>
                 <Tab closable="false" text="กำลังเข้าฉาย">
                     <content>
-                        <Pane fx:id="container" prefHeight="200.0" prefWidth="200.0">
+                        <Pane fx:id="container" prefHeight="653.0" prefWidth="1000.0">
                      <children>
-                        <TableView fx:id="program_list" layoutY="-2.0" prefHeight="1078.0" prefWidth="1201.0">
+                        <TableView fx:id="program_list" layoutY="40.0" prefHeight="654.0" prefWidth="1201.0">
                           <columns>
                             <TableColumn fx:id="program_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
                             <TableColumn fx:id="program_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />
@@ -25,12 +26,13 @@
                               <TableColumn fx:id="program_column_button_showtime" minWidth="0.0" prefWidth="87.0" style="-fx-alignment: center;" />
                           </columns>
                         </TableView>
+                        <Button mnemonicParsing="false" onAction="#refresh" prefWidth="1200.0" text="Refresh" />
                      </children>
                         </Pane>
                     </content></Tab>
                 <Tab closable="false" text="เร็วๆนี้">
                <content>
-                  <TableView fx:id="movie_list" prefHeight="1075.0" prefWidth="1200.0">
+                  <TableView fx:id="movie_list" prefHeight="652.0" prefWidth="1000.0">
                      <columns>
                         <TableColumn fx:id="movie_column_picture" prefWidth="225.0" style="-fx-alignment: center; -fx-cell-size: 200px;" />
                         <TableColumn fx:id="movie_column_name" prefWidth="220.0" style="-fx-wrap-text: true;" text="เรื่อง" />
