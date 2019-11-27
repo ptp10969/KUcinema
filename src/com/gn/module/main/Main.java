@@ -53,15 +53,13 @@ public class Main implements Initializable {
     @FXML private HBox boxStatus;
     @FXML private VBox info;
     @FXML private VBox views;
-    @FXML private Circle cStatus;
-    @FXML private Label status;
+
     @FXML public  ScrollPane body;
     @FXML public  Label title;
     @FXML private TextField search;
     @FXML private ScrollPane scroll;
-    @FXML private TitledPane design;
-    @FXML private TitledPane controls;
-    @FXML private TitledPane charts;
+
+
     @FXML private Button home;
     @FXML private Button  about;
     @FXML private Button hamburger;
@@ -70,8 +68,8 @@ public class Main implements Initializable {
     @FXML private Button clear;
     @FXML private JFXButton config;
     @FXML private VBox drawer;
-    @FXML private JFXBadge messages;
-    @FXML private JFXBadge notifications;
+
+
     @FXML private JFXBadge bg_info;
     @FXML private ToggleGroup group;
     @FXML public Label fullname ;
@@ -123,13 +121,7 @@ public class Main implements Initializable {
         System.out.println(Seat.readSeat(connection,3).get(0).getReserve_by());
         Calendar currenttime = Calendar.getInstance();
         loadContentPopup();
-        group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                cStatus.setFill( ((RadioButton) newValue).getTextFill());
-                status.setText(((RadioButton)newValue).getText());
-            }
-        });
+
 
 
         populateItems();
@@ -300,9 +292,7 @@ public class Main implements Initializable {
     private void barInitial(){
         filteredList.setPredicate(s -> true);
         scroll.setContent(views);
-        ( (VBox) design.getContent()).getChildren().setAll(designItems);
-        ( (VBox) controls.getContent()).getChildren().setAll(controlsItems);
-        ( (VBox) charts.getContent()).getChildren().setAll(chartsItems);
+
 
         views.getChildren().removeAll(home, about);
         views.getChildren().add(home);
@@ -345,21 +335,6 @@ public class Main implements Initializable {
             if (node instanceof Button) {
                 items.add( (Button) node);
             }
-        }
-
-        for (Node node : ((VBox) controls.getContent()).getChildren()) {
-            controlsItems.add((Button) node);
-            items.add((Button) node);
-        }
-
-        for (Node node : ((VBox) design.getContent()).getChildren()) {
-            designItems.add((Button) node);
-            items.add((Button) node);
-        }
-
-        for (Node node : ((VBox) charts.getContent()).getChildren()) {
-            chartsItems.add((Button) node);
-            items.add((Button) node);
         }
     }
 
@@ -734,7 +709,7 @@ public class Main implements Initializable {
             pop.setHeaderAlwaysVisible(false);
             pop.setCornerRadius(0);
             pop.setAutoFix(true);
-            pop.show(messages);
+
 
         } else {
             pop.hide();
@@ -801,7 +776,7 @@ public class Main implements Initializable {
             pop.setCloseButtonEnabled(false);
             pop.setHeaderAlwaysVisible(false);
             pop.setCornerRadius(0);
-            pop.show(notifications);
+
 
         } else {
             pop.hide();
