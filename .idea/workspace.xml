@@ -37,14 +37,13 @@
       <change beforePath="$PROJECT_DIR$/src/test/SeatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SeatTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/ShowTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ShowTimeTest.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="FUSProjectUsageTrigger">
     <session id="-556510405">
       <usages-collector id="statistics.lifecycle.project">
@@ -172,7 +171,6 @@
       </file>
     </leaf>
   </component>
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -196,9 +194,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
-  <component name="ProjectId" id="1UCXYQJ31EecRbKnhGu4aajTBzO" />
-=======
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -311,20 +306,14 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574860884429" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574860889046" />
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -392,10 +381,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.SeatTest" />
-<<<<<<< HEAD
-      <option name="TEST_OBJECT" value="class" />
-=======
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -426,22 +411,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.ShowTimeTest" />
-<<<<<<< HEAD
-      <option name="TEST_OBJECT" value="class" />
-=======
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.MovieTest.create" />
       <item itemvalue="JUnit.SeatTest.createSeatsAndReadSeats" />
-<<<<<<< HEAD
-=======
       <item itemvalue="Application.App" />
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
       <item itemvalue="JUnit.SeatTest" />
       <item itemvalue="JUnit.ShowTimeTest" />
     </list>
@@ -500,18 +477,6 @@
       <configuration name="SeatTest" configurationId="JUnit" />
     </history-entry>
   </component>
-<<<<<<< HEAD
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-=======
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
@@ -546,7 +511,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -554,18 +518,18 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/SeatTest.java</url>
           <line>15</line>
+          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/MovieTest.java</url>
           <line>16</line>
+          <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
-<<<<<<< HEAD
-=======
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dashboard.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -782,7 +746,6 @@
       </provider>
     </entry>
   </component>
->>>>>>> a062d11aaa4de9090ae97c9c937259e46fc96b5c
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">

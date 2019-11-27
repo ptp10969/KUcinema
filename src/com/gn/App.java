@@ -65,6 +65,8 @@ public class App extends Application {
         load("movie","Seat");
         load("movie","AddMovie");
         load("movie","AddProgram");
+        load("movie","EditMovie");
+        load("movie","CheckProgram");
 //        System.out.println(ViewManager.getInstance().getSize());
 
         // delay

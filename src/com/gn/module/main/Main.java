@@ -608,6 +608,17 @@ public class Main implements Initializable {
         title.setText("เพิ่มโปรแกรมหนัง");
         body.setContent(ViewManager.getInstance().get("AddProgram"));
     }
+    @FXML
+    private void checkProgram(){
+        title.setText("เช็คโปรแกรมหนัง");
+        body.setContent(ViewManager.getInstance().get("AddProgram"));
+    }
+
+    @FXML
+    private void editMovie(){
+        title.setText("แก้ไขหนัง");
+        body.setContent(ViewManager.getInstance().get("EditMovie"));
+    }
 
     @FXML
     private void treeTableView(){

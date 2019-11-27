@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="713.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.movie.EditMovieController">
+   <children>
+      <Label layoutX="231.0" layoutY="37.0" text="ชื่อหนัง :" />
+      <Button layoutX="456.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleClickSearchMovie" text="ค้นหา" />
+      <ComboBox fx:id="comboBoxx" layoutX="280.0" layoutY="33.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label layoutX="192.0" layoutY="117.0" text="ชื่อหนัง :" />
+      <TextField fx:id="name" layoutX="238.0" layoutY="113.0" prefHeight="25.0" prefWidth="330.0" />
+      <TextField fx:id="detail" layoutX="238.0" layoutY="161.0" prefHeight="140.0" prefWidth="330.0" />
+      <Label layoutX="174.0" layoutY="161.0" text="รายละเอียด :" />
+      <Label layoutX="153.0" layoutY="324.0" text="ลิงค์ตัวอย่างหนัง :" />
+      <TextField fx:id="link" layoutX="238.0" layoutY="320.0" prefHeight="25.0" prefWidth="330.0" />
+      <Label layoutX="156.0" layoutY="364.0" text="รูปประกอบหนัง :" />
+      <Button fx:id="addPhoto" layoutX="238.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleClickAddPhoto" text="เลือกรูป" />
+      <ImageView fx:id="image" fitHeight="179.0" fitWidth="387.0" layoutX="238.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="edit" layoutX="600.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleClickEditMovie" prefHeight="25.0" prefWidth="66.0" text="แก้ไข" />
+      <Button fx:id="delete" layoutX="680.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleClickDeleteMovie" prefHeight="25.0" prefWidth="66.0" text="ลบ" />
+   </children>
+</AnchorPane>
