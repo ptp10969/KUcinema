@@ -12,11 +12,8 @@
 <?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.HBox?>
@@ -41,63 +38,24 @@
                   </GNAvatarView>
                <VBox fx:id="info" alignment="CENTER" minHeight="-Infinity" prefHeight="101.0" prefWidth="249.0">
                   <children>
-                     <Label fx:id="fullname" alignment="CENTER" prefHeight="32.0" prefWidth="166.0" style="-fx-text-fill: -text-color;" text="USERNAME" textAlignment="CENTER">
+                     <Label fx:id="fullname" alignment="CENTER" prefHeight="185.0" prefWidth="230.0" style="-fx-text-fill: -text-color;" text="USERNAME" textAlignment="CENTER">
                         <VBox.margin>
                            <Insets top="10.0" />
                         </VBox.margin>
                         <font>
-                           <Font name="Roboto" size="12.0" />
+                           <Font size="25.0" />
                         </font></Label>
-                     <HBox alignment="CENTER" prefHeight="27.0" prefWidth="249.0" spacing="4.0">
+                     <HBox alignment="CENTER" prefHeight="111.0" prefWidth="227.0" spacing="4.0">
                         <children>
                            <Circle fx:id="cStatus" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: -success;">
                               <effect>
                                  <DropShadow color="#00000032" />
                               </effect>
                            </Circle>
-                           <Label fx:id="status" alignment="CENTER" maxWidth="50.0" minWidth="50.0" style="-fx-text-fill: -text-color;" text="Available" />
+                           <Label fx:id="status" alignment="CENTER" maxWidth="50.0" minWidth="50.0" style="-fx-text-fill: -text-color;" text="Online" />
                         </children>
                      </HBox>
-                     <HBox prefHeight="53.0" prefWidth="249.0" VBox.vgrow="ALWAYS">
-                        <children>
-                           <HBox alignment="CENTER" prefHeight="65.0" prefWidth="249.0" spacing="30.0" HBox.hgrow="ALWAYS">
-                              <children>
-                                 <RadioButton contentDisplay="GRAPHIC_ONLY" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="25.0" selected="true" style="-fx-text-fill: -success;" text="Available">
-                                    <toggleGroup>
-                                       <ToggleGroup fx:id="group" />
-                                    </toggleGroup>
-                                    <styleClass>
-                                       <String fx:value="radio-success" />
-                                       <String fx:value="radio-drawer" />
-                                    </styleClass>
-                                    <tooltip>
-                                       <Tooltip text="Available" />
-                                    </tooltip>
-                                 </RadioButton>
-                                 <RadioButton contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="25.0" style="-fx-text-fill: -warning;" text="Away" toggleGroup="$group">
-                                    <styleClass>
-                                       <String fx:value="radio-warning" />
-                                       <String fx:value="radio-drawer" />
-                                    </styleClass>
-                                    <tooltip>
-                                       <Tooltip text="Away" />
-                                    </tooltip>
-                                 </RadioButton>
-                                 <RadioButton contentDisplay="GRAPHIC_ONLY" layoutX="110.0" layoutY="10.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="25.0" style="-fx-text-fill: -danger;" text="Busy" toggleGroup="$group">
-                                    <styleClass>
-                                       <String fx:value="radio-danger" />
-                                       <String fx:value="radio-drawer" />
-                                    </styleClass>
-                                    <tooltip>
-                                       <Tooltip text="Busy" />
-                                    </tooltip>
-                                 </RadioButton>
-                              </children>
-                           </HBox>
-                        </children>
-                        <VBox.margin>
-                           <Insets />
-                        </VBox.margin>
+                     <HBox prefHeight="53.0" prefWidth="249.0">
                         <padding>
                            <Insets bottom="10.0" top="10.0" />
                         </padding>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83795b27-00c4-4c0e-9fca-b300d580eb8c" name="Default Changelist" comment="" />
+    <list default="true" id="83795b27-00c4-4c0e-9fca-b300d580eb8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gn/module/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gn/module/main/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/main/main.fxml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gn/module/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="343" column="9" selection-start-line="343" selection-start-column="9" selection-end-line="343" selection-end-column="9" />
+            <state relative-caret-position="68">
+              <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,7 +115,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574843898449" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574844748947" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -153,12 +161,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574842577960</updated>
-      <workItem from="1574842580980" duration="1093000" />
+      <workItem from="1574842580980" duration="2011000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1093000" />
+    <option name="totallyTimeSpent" value="2011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -208,8 +216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gn/module/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="343" column="9" selection-start-line="343" selection-start-column="9" selection-end-line="343" selection-end-column="9" />
+        <state relative-caret-position="68">
+          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

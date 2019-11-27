@@ -53,8 +53,7 @@ public class Main implements Initializable {
     @FXML private HBox boxStatus;
     @FXML private VBox info;
     @FXML private VBox views;
-    @FXML private Circle cStatus;
-    @FXML private Label status;
+
     @FXML public  ScrollPane body;
     @FXML public  Label title;
     @FXML private TextField search;
@@ -121,13 +120,7 @@ public class Main implements Initializable {
         System.out.println(Seat.readSeat(connection,3).get(0).getReserve_by());
         Calendar currenttime = Calendar.getInstance();
         loadContentPopup();
-        group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                cStatus.setFill( ((RadioButton) newValue).getTextFill());
-                status.setText(((RadioButton)newValue).getText());
-            }
-        });
+
 
 
         populateItems();
