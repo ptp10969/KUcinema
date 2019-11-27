@@ -1,4 +1,5 @@
 # Project Name - KU CINEMA 
+https://raw.githubusercontent.com/folkdogfk/KUcinema/master/src/com/gn/module/media/logo-mini.png?token=AMUSFGUY3UV42FQB7GNLV6C546XIG
 # สมาชิกในกลุ่ม
 
 | รหัสนิสิต  | ชื่อ  | github username |
