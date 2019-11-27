@@ -44,9 +44,11 @@ public class AddProgramController {
     @FXML
     private CheckBox time18;
 
+    public static AddProgramController apc;
+
     @FXML
     private void initialize() {
-
+        apc = this;
         // Within this initialize method, you can initialize the data for the ComboBox. I have changed the
         // method from fillComboBox2() to getData(), which returns a List of Strings.
         // We need to set the ComboBox to use that list.
@@ -70,6 +72,26 @@ public class AddProgramController {
 
     }
 
+    public void load(){
+        comboBoxx.setItems(FXCollections.observableArrayList(getData()));
+        LocalDate minDate =  LocalDate.now();
+
+        date.setDayCellFactory(d ->
+                new DateCell() {
+                    @Override public void updateItem(LocalDate item, boolean empty) {
+                        super.updateItem(item, empty);
+                        setDisable( item.isBefore(minDate) || empty || item.getDayOfWeek() == DayOfWeek.SUNDAY|| empty || item.getDayOfWeek() == DayOfWeek.SATURDAY);
+
+                    }});
+
+        addProgram.setDisable(true);
+        time9.setDisable(true);
+        time12.setDisable(true);
+        time15.setDisable(true);
+        time18.setDisable(true);
+    }
+
+
     /**
      * Here we will define the method that builds the List used by the ComboBox
      */
@@ -82,7 +104,7 @@ public class AddProgramController {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             String query = "select * from movies";
             PreparedStatement statement = connection.prepareStatement(query);
 
@@ -106,7 +128,7 @@ public class AddProgramController {
     }
     @FXML public void handleClickAddProgram(ActionEvent e)  {
         Date date1 = java.sql.Date.valueOf(date.getValue());
-        program.create(movie.get((comboBoxx.getValue())),date1);
+        program = Program.create(movie.get((comboBoxx.getValue())),date1);
         if(time9.isSelected()){
             program.addShowTime("09.00");
         }
@@ -119,6 +141,7 @@ public class AddProgramController {
         if(time18.isSelected()){
             program.addShowTime("18.00");
         }
+        HomeController.HomeCtr.refresh();
 
 
 
@@ -131,7 +154,7 @@ public class AddProgramController {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             String query = "SELECT COUNT(*)  FROM programs where DATE = '" +date1+ "'";
             Statement stmt = connection.createStatement();
             //Query to get the number of rows in a table

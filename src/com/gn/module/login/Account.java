@@ -131,7 +131,7 @@ public class Account implements Initializable {
         ArrayList<String> str = new ArrayList<>();
         Register user = new Register();
         try {
-            Connection connection = Database.connect("localhost/se_db", "root", "");
+            Connection connection = Database.getConnection();
             String query = "SELECT * FROM users WHERE username = '" +username+"' AND password = '" +password+"'";
 
             Statement psmt = connection.createStatement();

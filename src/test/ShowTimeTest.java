@@ -18,7 +18,7 @@ public class ShowTimeTest {
     @Test
     public void createShowTimeAndReadShowTime() {
         try {
-            Connection connection = Database.connect("localhost/se_db","root","");
+            Connection connection = Database.getConnection();
             ShowTime showTime = ShowTime.createShowTime(connection,"11.15",0, new java.sql.Date(Calendar.getInstance().getTime().getTime()));
             ArrayList<ShowTime> showTimes = ShowTime.readShowTime(connection,0);
             assertEquals(showTime.getTime(),showTimes.get(0).getTime());

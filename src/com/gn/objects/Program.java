@@ -34,7 +34,7 @@ public class Program {
 
     public static Program create( Movie movie , Date date){
         Program program = null;
-        Connection connection = Database.connect("localhost/se_db", "root", "");
+        Connection connection = Database.getConnection();
         try {
             String sql = "INSERT INTO programs(movie_id,date)"
                     + "VALUES(?,?)";
@@ -56,15 +56,14 @@ public class Program {
     }
 
     public void addShowTime(String showtime){
-        Connection connection = Database.connect("localhost/se_db", "root", "");
-        //showTimes.add(ShowTime.createShowTime(connection,showtime,id,date));
+        Connection connection = Database.getConnection();
+        showTimes.add(ShowTime.createShowTime(connection,showtime,id,date));
     }
 
     public static HashMap<String,Program> readProgram(Connection connection , HashMap<String,Movie> movies){
         HashMap<String,Program> programs = new HashMap<>();
         try {
             String query = "Select * from programs";
-
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){

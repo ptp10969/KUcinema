@@ -77,7 +77,7 @@ public class AddMovieController {
             int count = 0;
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection connection = Database.connect("localhost/se_db", "root", "");
+                Connection connection = Database.getConnection();
                 String query = "SELECT COUNT(*)  FROM movies where name = '" + name.getText() + "'";
                 Statement stmt = connection.createStatement();
                 //Query to get the number of rows in a table
@@ -99,9 +99,11 @@ public class AddMovieController {
                 Blob blob = new javax.sql.rowset.serial.SerialBlob(byteArray);
                 movie.create(file, name.getText(), detail.getText(), link.getText());
                 Alerts.success("เพิ่มหนังสำเร็จ ", "เพิ่มหนัง " + name.getText() + " สำเร็จ");
+                HomeController.HomeCtr.refresh();
             } else {
                 Alerts.error("เพิ่มหนังไม่สำเร็จ", "ขออภัยหนังชื่อ" + name.getText() + " มีในระบบแล้ว");
             }
+            AddProgramController.apc.load();
             load();
 
         }

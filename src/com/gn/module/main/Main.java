@@ -90,7 +90,7 @@ public class Main implements Initializable {
     private ObservableList<Button> chartsItems   = FXCollections.observableArrayList();
 
     //ต่อ Database
-    public Connection connection = Database.connect("localhost/se_db","root","");
+    public final Connection connection = Database.getConnection();
     public HashMap<String,Movie> movies = Movie.getMoviesData(connection);
     public ArrayList<String> keys = Movie.getMovieKey(connection);
 
@@ -118,7 +118,6 @@ public class Main implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources)  {
         ctrl = this;
-        System.out.println(Seat.readSeat(connection,3).get(0).getReserve_by());
         Calendar currenttime = Calendar.getInstance();
         loadContentPopup();
 
