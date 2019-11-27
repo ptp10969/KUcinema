@@ -4,172 +4,23 @@
     <list default="true" id="342ae097-cfe4-4650-bbf0-6c4e936c82d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/Database/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/Database/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/login/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/login/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/login/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/login/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/AddMovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/AddMovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/AddProgramController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/AddProgramController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/AddProgramController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/AddProgramController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/SeatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/SeatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/objects/Seat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/test/SeatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/test/SeatTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/test/ShowTimeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/test/ShowTimeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/main/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/CheckProgram.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/CheckProgram.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/CheckProgramController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KUcinema/com/gn/module/movie/CheckProgramController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/picture.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/Database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/login/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/login/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/login/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/login/login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gn/module/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gn/module/main/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/main/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/AddProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/AddProgramController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/SeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/SeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/objects/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/objects/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/objects/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/objects/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/objects/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/objects/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gn/objects/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/objects/Seat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SeatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SeatTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ShowTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ShowTimeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/CheckProgram.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/CheckProgram.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gn/module/movie/CheckProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gn/module/movie/CheckProgramController.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-556510405">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="fxml" value="6" />
-          <entry key="java" value="55" />
-          <entry key="jpg" value="1" />
-          <entry key="png" value="1" />
-          <entry key="properties" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="Image" value="2" />
-          <entry key="JAVA" value="55" />
-          <entry key="Properties" value="1" />
-          <entry key="XML" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="2215" />
-          <entry key="properties" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="2215" />
-          <entry key="Properties" value="9" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/module/login/login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
-              <caret line="188" selection-start-line="188" selection-end-line="188" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/HomeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="154" column="19" lean-forward="true" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/objects/Movie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/module/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/Home.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="35" selection-start-column="35" selection-end-column="35" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/MovieDetail.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/AddProgramController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gn/objects/Program.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -178,134 +29,10 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>logged</find>
-      <find>register</find>
-      <find>setUser</find>
-      <find>file</find>
-      <find>Main.ctrl.connection</find>
-      <find>read</find>
-    </findStrings>
-    <dirStrings>
-      <dir>F:\DesTemp\KUcinema</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/dashboard.properties" />
-        <option value="$PROJECT_DIR$/src/com/gn/objects/ShowTime.java" />
-        <option value="$PROJECT_DIR$/src/test/ProgramTest.java" />
-        <option value="$PROJECT_DIR$/src/test/MovieTest.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/objects/Register.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/objects/Movie.java" />
-        <option value="$PROJECT_DIR$/src/test/ShowTimeTest.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/module/login/Account.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/module/login/login.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/module/movie/SeatController.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/objects/Seat.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/module/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/SeatTest.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/Database/Database.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/module/movie/AddProgramController.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/objects/Program.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java" />
-        <option value="$PROJECT_DIR$/src/com/gn/module/movie/HomeController.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="381" />
-    <option name="y" value="-16" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gn" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gn" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gn" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gn" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="movie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gn" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KUcinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KUcinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1UCuZtcN434i6s2hvGABDR9mARj" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -381,6 +108,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.SeatTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -411,14 +139,15 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.ShowTimeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.MovieTest.create" />
       <item itemvalue="JUnit.SeatTest.createSeatsAndReadSeats" />
-      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.SeatTest" />
       <item itemvalue="JUnit.ShowTimeTest" />
     </list>
@@ -445,72 +174,18 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="SeatTest - 2019.11.27 at 17h 52m 11s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShowTimeTest - 2019.11.27 at 17h 52m 22s.xml">
-      <configuration name="ShowTimeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShowTimeTest - 2019.11.27 at 17h 52m 28s.xml">
-      <configuration name="ShowTimeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeatTest - 2019.11.27 at 17h 52m 32s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeatTest - 2019.11.27 at 17h 57m 07s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeatTest - 2019.11.27 at 18h 02m 33s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeatTest - 2019.11.27 at 18h 02m 48s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeatTest - 2019.11.27 at 18h 09m 36s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeatTest - 2019.11.27 at 18h 09m 56s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeatTest - 2019.11.27 at 19h 47m 39s.xml">
-      <configuration name="SeatTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27452415" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2357595" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.04113924" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-    </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -518,233 +193,15 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/SeatTest.java</url>
           <line>15</line>
-          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/MovieTest.java</url>
           <line>16</line>
-          <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dashboard.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/ShowTimeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/media/img/profile.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="656" selection-start-line="656" selection-end-line="656" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/media/img/avatar.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/main/Config.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/main/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-930">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/login/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="133" column="60" selection-start-line="133" selection-start-column="60" selection-end-line="133" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ProgramTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MovieTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/SeatController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/AddProgram.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/objects/ShowTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/objects/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/objects/Seat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/Database/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/main/main.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ShowTimeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/SeatTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/login/login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/MovieDetail.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/AddProgramController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/objects/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/AddMovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/Home.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/objects/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gn/module/movie/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="154" column="19" lean-forward="true" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

@@ -128,25 +128,38 @@ public class AddProgramController {
         }
     }
     @FXML public void handleClickAddProgram(ActionEvent e)  {
-        Date date1 = java.sql.Date.valueOf(date.getValue());
-        program = Program.create(movie.get((comboBoxx.getValue())),date1);
-        if(time9.isSelected()){
-            program.addShowTime("09.00");
-        }
-        if(time12.isSelected()){
-            program.addShowTime("12.00");
-        }
-        if(time15.isSelected()){
-            program.addShowTime("15.00");
-        }
-        if(time18.isSelected()){
-            program.addShowTime("18.00");
-        }
+        if ((time9.isSelected()||time12.isSelected()||time15.isSelected()||time18.isSelected())) {
+            Date date1 = java.sql.Date.valueOf(date.getValue());
+            program = Program.create(movie.get((comboBoxx.getValue())), date1);
+            if (time9.isSelected()) {
+                program.addShowTime("09.00");
+            }
+            if (time12.isSelected()) {
+                program.addShowTime("12.00");
+            }
+            if (time15.isSelected()) {
+                program.addShowTime("15.00");
+            }
+            if (time18.isSelected()) {
+                program.addShowTime("18.00");
+            }
 
-        Alerts.success("เพิ่มหนังสำเร็จ ", "เพิ่มโปรแกรมหนังสำเร็จ");
+            Alerts.success("เพิ่มโปรแกรมหนังสำเร็จ ", "เพิ่มโปรแกรมหนังสำเร็จ");
+            addProgram.setDisable(true);
+            time9.setDisable(true);
+            time12.setDisable(true);
+            time15.setDisable(true);
+            time18.setDisable(true);
+            time12.setSelected(false);
+            time9.setSelected(false);
+            time12.setSelected(false);
+            time15.setSelected(false);
 
-        HomeController.HomeCtr.refresh();
-
+            HomeController.HomeCtr.refresh();
+        }
+        else{
+            Alerts.error("เพิ่มโปรแกรมหนังไม่สำเร็จ", "กรุณาเลือกเวลาก่อน");
+        }
 
 
     }

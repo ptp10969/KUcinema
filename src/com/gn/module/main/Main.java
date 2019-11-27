@@ -611,7 +611,7 @@ public class Main implements Initializable {
     @FXML
     private void checkProgram(){
         title.setText("เช็คโปรแกรมหนัง");
-        body.setContent(ViewManager.getInstance().get("AddProgram"));
+        body.setContent(ViewManager.getInstance().get("CheckProgram"));
     }
 
     @FXML
