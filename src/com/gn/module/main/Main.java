@@ -59,9 +59,8 @@ public class Main implements Initializable {
     @FXML public  Label title;
     @FXML private TextField search;
     @FXML private ScrollPane scroll;
-    @FXML private TitledPane design;
-    @FXML private TitledPane controls;
-    @FXML private TitledPane charts;
+
+
     @FXML private Button home;
     @FXML private Button  about;
     @FXML private Button hamburger;
@@ -299,9 +298,7 @@ public class Main implements Initializable {
     private void barInitial(){
         filteredList.setPredicate(s -> true);
         scroll.setContent(views);
-        ( (VBox) design.getContent()).getChildren().setAll(designItems);
-        ( (VBox) controls.getContent()).getChildren().setAll(controlsItems);
-        ( (VBox) charts.getContent()).getChildren().setAll(chartsItems);
+
 
         views.getChildren().removeAll(home, about);
         views.getChildren().add(home);
@@ -344,21 +341,6 @@ public class Main implements Initializable {
             if (node instanceof Button) {
                 items.add( (Button) node);
             }
-        }
-
-        for (Node node : ((VBox) controls.getContent()).getChildren()) {
-            controlsItems.add((Button) node);
-            items.add((Button) node);
-        }
-
-        for (Node node : ((VBox) design.getContent()).getChildren()) {
-            designItems.add((Button) node);
-            items.add((Button) node);
-        }
-
-        for (Node node : ((VBox) charts.getContent()).getChildren()) {
-            chartsItems.add((Button) node);
-            items.add((Button) node);
         }
     }
 
