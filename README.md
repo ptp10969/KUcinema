@@ -1,4 +1,5 @@
 # Project Name - KU CINEMA 
+![](https://github.com/folkdogfk/KUcinema/blob/master/src/com/gn/module/media/logo-mini.png)
 # สมาชิกในกลุ่ม
 
 | รหัสนิสิต  | ชื่อ  | github username |
@@ -11,6 +12,8 @@
 ## คำอธิบายโปรเจค
 โปรเจคนี้เป็นการทำระบบจองที่นั่งในโรงหนังขนาดเล็กของมหาวิทยาลัย ชื่อว่า KU-Cinema เพื่อให้นิสิตหรือบุคลากรที่เป็นสมาชิกของระบบสามารถจองที่นั่งเพื่อเข้าไปชมภาพยนตร์ได้
 และสมาชิกของระบบ สามารถตรวจสอบที่นั่ง ตรวจสอบภาพยนตร์ที่จะเข้าฉาย หรือกำลังทำการฉายอยู่ และสามารถจองที่นั่งได้ ส่วน ADMIN ของระบบสามารถทำการเพิ่มหนังได้ สามารถทำการเพิ่มรอบหนังได้ 
+## Open Source Theme 
+โดย Project นี่ได้มีการใช้งาน Open Source Theme DashBordFX https://github.com/Gleidson28/DashboardFx เข้ามาเพื่อเพิ่มความสวยงาม โดย การทำงานของระบบของ KU CINEMA จะอยุ่ที่ PACKAGE com/gn/module/movie , com/gn/objects , com/gn/Database 
 
 ## ขั้นตอนการติดตั้งโปรเจค
 1. clone โปรเจคมาจาก github ลิ้งค์ https://github.com/folkdogfk/KUcinema.git
