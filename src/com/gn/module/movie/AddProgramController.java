@@ -142,7 +142,9 @@ public class AddProgramController {
         if(time18.isSelected()){
             program.addShowTime("18.00");
         }
+
         Alerts.success("เพิ่มหนังสำเร็จ ", "เพิ่มโปรแกรมหนังสำเร็จ");
+
         HomeController.HomeCtr.refresh();
 
 
