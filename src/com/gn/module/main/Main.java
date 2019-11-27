@@ -69,8 +69,8 @@ public class Main implements Initializable {
     @FXML private Button clear;
     @FXML private JFXButton config;
     @FXML private VBox drawer;
-    @FXML private JFXBadge messages;
-    @FXML private JFXBadge notifications;
+
+
     @FXML private JFXBadge bg_info;
     @FXML private ToggleGroup group;
     @FXML public Label fullname ;
@@ -715,7 +715,7 @@ public class Main implements Initializable {
             pop.setHeaderAlwaysVisible(false);
             pop.setCornerRadius(0);
             pop.setAutoFix(true);
-            pop.show(messages);
+
 
         } else {
             pop.hide();
@@ -782,7 +782,7 @@ public class Main implements Initializable {
             pop.setCloseButtonEnabled(false);
             pop.setHeaderAlwaysVisible(false);
             pop.setCornerRadius(0);
-            pop.show(notifications);
+
 
         } else {
             pop.hide();
